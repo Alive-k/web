@@ -1,0 +1,27 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.35mm" height="14.01mm" viewBox="0 0 32.18 39.73">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0 0)">
+      <rect class="cls-1" width="32.18" height="39.73"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <rect class="cls-3" x="1" y="1" width="30.18" height="37.73" rx="1.89"/>
+    <polygon class="cls-3" points="8.54 1 17.03 1 17.03 16.09 12.79 12.32 8.54 16.09 8.54 1"/>
+    <line class="cls-3" x1="8.54" y1="23.64" x2="17.98" y2="23.64"/>
+    <line class="cls-3" x1="8.54" y1="29.29" x2="23.63" y2="29.29"/>
+  </g>
+</svg>
