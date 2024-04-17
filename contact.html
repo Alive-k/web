@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <script src="./js/jquery.min.js"></script>
+  <style>
+    .container{
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .contact-list-diy{
+      background: #f9f9f9;
+      padding: 80px 0;
+    }
+    .contact-list-diy .container{
+      max-width: 1400px;
+    }
+    .contact-list-diy .contact-list{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .contact-list-diy .contact-item{
+      background: #fff;
+      width: calc(25% - 24px);
+      margin-right: 32px;
+      padding: 60px;
+      text-align: center;
+      font-size: 18px;
+      transition: all .4s ease;
+    }
+
+    .contact-list-diy .contact-item:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 33px 90px rgba(0, 0, 0, 0.06);
+    }
+    .contact-list-diy .contact-item:last-child{
+      margin-right: 0;
+    }
+    .contact-list-diy .contact-item .img{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 45px;
+      width: 37.5%;
+    }
+    .contact-list-diy .contact-list-title{
+      font-size: 25px;
+      color: #000;
+      margin-bottom: 30px;
+      font-family: var(--heading-font-family);
+    }
+
+    .contact-list-diy .contact-list-btn{
+      width: 100%;
+      height: 46px;
+      max-width: 195px;
+      margin: 0 auto;
+      font-size: 18px;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      border: 2px solid #000;
+    }
+
+    .contact-list-diy .contact-list-btn:hover .btn-txt::before{
+      color: #000;
+      font-family: var(--heading-font-family);
+      white-space: nowrap;
+    }
+
+    .contact-list-diy .contact-list-p{
+      color: #939393;
+      line-height: 1.2;
+    }
+
+    .contact-list-diy .p-m10{
+      margin-top: 10px;
+    }
+
+    .contact-list-diy a{
+      
+      color: #000;
+      text-decoration: underline;
+      line-height: 1.2;
+      display: inline-block;
+    }
+    @media (max-width:1400px) {
+      .contact-list-diy .contact-item{
+        padding: 50px 20px;
+        font-size: 16px;
+      }
+      .contact-list-diy .contact-list-title{
+        font-size: 20px;
+      }
+      .contact-list-diy .contact-item .img{
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width:991px) {
+      .contact-list-diy{
+        padding: 60px 0;
+      }
+      .contact-list-diy .contact-item{
+        width: calc(50% - 16px);
+        margin-bottom: 32px;
+      }
+      .contact-list-diy .contact-item:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width:640px) {
+      .contact-list-diy .contact-item{
+        width:100%;
+        margin-right: 0;
+        font-size: 18px;
+      }
+      .contact-list-diy .contact-item:last-child{
+        margin-bottom: 0;
+      }
+      .contact-list-diy .contact-list-title{
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-list-diy">
+    <div class="container">
+      <div class="contact-list">
+        <div class="contact-item">
+          <img src="./images12/1.svg" class="img" alt="">
+          <div class="contact-text">
+            <div class="contact-list-title">CHAT US 24/7</div>
+            <div class="contact-list-btn btn-diy">
+              <div class="btn-txt" text="Chat Now">
+                <span>Chat Now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="./images12/2.svg" class="img" alt="">
+          <div class="contact-text">
+            <div class="contact-list-title">EMAIL US 24/7</div>
+            <div class="contact-list-p">
+              <a href="" target="_blank">Click here</a> or email
+            </div>
+            <a href="" class="p-m10">support@ulikeglobal.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="./images12/3.svg" class="img" alt="">
+          <div class="contact-text">
+            <div class="contact-list-title">GIVE US A CALL</div>
+            <a href="">+1 833-206-6933</a>
+            <div class="contact-list-p p-m10">
+              Mon - Fri: 9AM-7PM EST
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="./images12/4.svg" class="img" alt="">
+          <div class="contact-text">
+            <div class="contact-list-title">PR INQUIRIES</div>
+            <a href="">pr@ulikeglobal.com</a>
+            <div class="contact-list-p p-m10">
+              24 business hours
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

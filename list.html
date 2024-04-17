@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <script src="./js/jquery.min.js"></script>
+  <style>
+    .container{
+      max-width: 1600px;
+      padding: 0 40px;
+    }
+
+    @media (max-width:991px) {
+      .container{
+        padding: 0 24px;
+      }
+    }
+    .product-area-box {
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+  background: #fff;
+}
+.product-area-box .product-area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 51px;
+}
+.product-area-box .product-area-item {
+  position: relative;
+  overflow: hidden;
+  width: calc(33.333% - 34px);
+}
+
+.product-area-box .product-area-tag {
+  position: absolute;
+  background: #e7004c;
+  font-size: 16px;
+  font-family: var(--heading-font-family);
+  color: #fff;
+  top: 15px;
+  left: 15px;
+  z-index: 3;
+  padding: 3px 10px;
+  overflow: hidden;
+}
+
+.product-area-box .product-area-tag::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  z-index: 2;
+  background: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  animation: scanning 3s linear infinite;
+}
+@keyframes scanning {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+.product-area-box .product-area-img-list {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.product-area-box .product-area-img-item {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+.product-area-box .product-area-img-item.active {
+  position: relative;
+  display: block;
+}
+.product-area-box .product-area-img-item.close {
+  z-index: 3;
+  transition: width 0.6s ease;
+  width: 0%;
+  height: 100%;
+  display: block;
+}
+.product-area-box .product-area-img-item.close .img {
+  width: auto;
+  max-width: none;
+  height: 100%;
+}
+.product-area-box .product-area-item .img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.product-area-box .product-area-cont {
+  background: #f8f8f8;
+  padding: 45px;
+  position: relative;
+  text-align: center;
+}
+
+
+.product-area-box .product-area-h3 {
+  font-size: 30px;
+  font-family: var(--heading-font-family);
+  color: #000;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: normal;
+}
+
+.product-area-box .product-area-p {
+  font-size: 20px;
+  color: #9b9b9b;
+  line-height: 1.2;
+}
+
+.product-area-box .product-area-price {
+  font-size: 25px;
+  color: #000;
+  font-family: var(--heading-font-family);
+  line-height: 1.2;
+  margin-top: 15px;
+}
+
+.product-area-box .product-area-price span {
+  color: #9b9b9b;
+  font-weight: normal;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.product-area-box .product-area-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.product-area-box .product-area-btn-item {
+  background: #000;
+  flex: 1;
+  color: #fff;
+  font-size: 16px;
+  height: 45px;
+  margin-left: 35px;
+  line-height: 1;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.product-area-box .product-area-btn-item::after {
+  background: #f8f8f8;
+}
+
+.product-area-box .product-area-btn-item:hover {
+  color: #000;
+}
+.product-area-box .product-area-btn-item:first-child {
+  margin-left: 0;
+  background: #f8f8f8;
+  color: #000;
+}
+.product-area-box .product-area-btn-item:first-child:hover {
+  color: #fff;
+}
+
+.product-area-box .product-area-btn-item:first-child::after {
+  background: #000;
+}
+
+@media (max-width: 1400px) {
+  .product-area-box .product-area-cont{
+    padding: 30px;
+  }
+  .product-area-box .product-area-h3 {
+    font-size: 25px;
+  }
+  .product-area-box .product-area-p {
+    font-size: 16px;
+  }
+  .product-area-box .product-area-price {
+    font-size: 20px;
+  }
+  .product-area-box .product-area-btn-item {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-area-box {
+    padding: 50px 0;
+  }
+  .product-area-box .product-area-list {
+    flex-wrap: wrap;
+  }
+  .product-area-box .product-area-item {
+    flex: auto;
+    width: 100%;
+  }
+
+  .product-area-box .product-area-cont {
+    padding: 25px 15px;
+  }
+
+  .product-area-box .product-area-h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .product-area-box .product-area-p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .product-area-box .product-area-price {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .product-area-box .product-area-btn {
+    margin-top: 30px;
+  }
+  .product-area-box .product-area-dot {
+    top: 0;
+    right: 0;
+    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .product-area-box .product-area-dot .product-area-dot-item {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+  }
+  .product-area-box .product-area-tag {
+    font-size: 12px;
+    padding: 1px 8px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="product-area-box">
+    <div class="container">
+      <div class="product-area-list">
+        <div class="product-area-item to-top" style="transition-delay: 0.1s">
+          <div class="product-area-tag">NEW</div>
+          <div class="product-area-img-list">
+            <div class="product-area-img-item active">
+              <img class="img" src="./images3/a1.png" alt="" />
+            </div>
+          </div>
+          <div class="product-area-cont">
+            <h3 class="product-area-h3 text-top">
+              Ulike Air 3
+            </h3>
+            <div class="product-area-p text-top">
+              Visible results in just 3 weeks
+            </div>
+            <div class="product-area-price to-top">
+              $120.00 <span>$130</span>
+            </div>
+            <div class="product-area-btn-box">
+              <div class="product-area-btn to-top">
+                <a href="#" class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Learn more >">
+                    <span> Learn more</span>
+                  </div>
+                </a>
+                <div class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Add to cart">
+                    <span>Add to cart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-area-item to-top" style="transition-delay: 0.2s">
+          <div class="product-area-tag">HOT</div>
+          <div class="product-area-img-list">
+            <div class="product-area-img-item active">
+              <img class="img" src="./images3/a2.png" alt="" />
+            </div>
+          </div>
+          <div class="product-area-cont">
+            <h3 class="product-area-h3 text-top">
+              Ulike Air 2
+            </h3>
+            <div class="product-area-p text-top">
+              Visible results in 4 weeks
+            </div>
+            <div class="product-area-price to-top">
+              $120.00 <span>$130</span>
+            </div>
+            <div class="product-area-btn-box">
+              <div class="product-area-btn to-top">
+                <a href="#" class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Learn more >">
+                    <span>Learn more</span>
+                  </div>
+                </a>
+                <div class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Add to cart">
+                    <span>Add to cart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-area-item to-top" style="transition-delay: 0.3s">
+          <div class="product-area-tag">HOT</div>
+          <div class="product-area-img-list">
+            <div class="product-area-img-item active">
+              <img class="img" src="./images3/a2.png" alt="" />
+            </div>
+          </div>
+          <div class="product-area-cont">
+            <h3 class="product-area-h3 text-top">
+              Ulike Air 2
+            </h3>
+            <div class="product-area-p text-top">
+              Visible results in 4 weeks
+            </div>
+            <div class="product-area-price to-top">
+              $120.00 <span>$130</span>
+            </div>
+            <div class="product-area-btn-box">
+              <div class="product-area-btn to-top">
+                <a href="#" class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Learn more >">
+                    <span>Learn more</span>
+                  </div>
+                </a>
+                <div class="product-area-btn-item btn-diy">
+                  <div class="btn-txt" text="Add to cart">
+                    <span>Add to cart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/theme.js"></script>
+<script src="./js/script.js"></script>
+
+</html>

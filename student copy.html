@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style type="text/css">
+    body>main>section.shopify-section {
+      margin: 0;
+    }
+
+    body>main>section.shopify-section>.page-width {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    body h1:not(.sb-lp__title) {
+      display: none;
+    }
+
+    .sb-lp__wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .sb-lp__wrapper-inner {
+      display: flex;
+      flex-wrap: nowrap;
+      max-width: 1100px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 20px;
+    }
+
+    .sb-lp__section-padding {
+      height: 100%;
+    }
+
+    .sb-lp__title {
+      margin-top: 20px;
+      font-size: 32px;
+      line-height: 125%;
+      color: #202223 !important;
+      font-weight: bold;
+    }
+
+    .sb-lp__text-container {
+      margin-bottom: 40px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #202223 !important;
+    }
+
+    .sb-lp__information {
+      padding-right: 20px;
+    }
+
+    .sb-lp__wrapper ol {
+      padding-inline-start: 20px;
+    }
+
+    .sb-lp__link-button {
+      text-decoration: none;
+    }
+
+    .sb-lp__link-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 48px;
+      color: #fff !important;
+      background-color: #6523e3 !important;
+      size: 16px;
+      margin-bottom: 14px;
+      border-radius: 5px;
+      text-decoration: none !important;
+    }
+
+    .sb-lp__vertical-divider {
+      width: 24px;
+      border: 1px solid #f8f8f8 !important;
+      transform: rotate(90deg);
+    }
+
+    .sb-lp__link-text {
+      font-size: 16px;
+      line-height: 110%;
+      color: #fff !important;
+      text-decoration: none !important;
+    }
+
+    .sb-lp__link-img {
+      margin: 0 !important;
+      border: none !important;
+    }
+
+    .sb-lp__powered-by-container {
+      margin-top: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sb-lp__powered-by-title {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 150%;
+      margin: 0;
+    }
+
+    .sb-lp__logo-sb {
+      max-width: 171px;
+      max-height: 23px;
+      margin: 2px 0 !important;
+      border: none !important;
+    }
+
+    .sb-lp__wrapper .sb-lp__link-about {
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 150%;
+      color: #158bcd !important;
+      text-decoration: none !important;
+      border-bottom: none !important;
+    }
+
+    @media screen and (min-width: 920px) {
+      .sb-lp__information {
+        min-width: 60%;
+        max-width: 60%;
+      }
+
+      .sb-lp__information+section {
+        min-width: 40%;
+      }
+
+      .sb-lp__text-list {
+        display: flex;
+        width: 550px;
+      }
+
+      .list-right {
+        margin-left: 20px;
+      }
+    }
+
+    @media screen and (max-width: 919px) {
+      .sb-lp__text-list {}
+
+      .list-right {
+        margin-left: 0px;
+      }
+
+      .sb-lp__wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sb-lp__wrapper-inner {
+        flex-wrap: wrap;
+        max-width: 650px;
+      }
+
+      .sb-lp__information {
+        height: 100%;
+        padding-right: 0;
+      }
+
+      .sb-lp__powered-by-container {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sb-lp__photo {
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .sb-lp__wrapper-inner {
+        max-width: 399px;
+      }
+    }
+  </style>
+  <div class="sb-lp__wrapper">
+    <div class="sb-lp__wrapper-inner">
+      <section class="sb-lp__information">
+        <div class="sb-lp__section-padding">
+          <h1 class="sb-lp__title">
+            Student &amp; Teacher Discount Available!
+          </h1>
+          <div class="sb-lp__text-container">
+            <p>
+              Students and teachers save&nbsp;on Ulike products with Student
+              Beans and ID.me.
+            </p>
+            <p>
+              For instant access to this discount simply register and verify
+              your status. It’s free!
+            </p>
+            <ol>
+              <li>
+                Verify your student status with Student Beans, or verify your
+                teacher status with ID.me
+              </li>
+              <li>Add items to cart</li>
+              <li>Discount will be automatically applied!</li>
+            </ol>
+          </div>
+          <div class="sb-lp__text-list">
+            <a href="https://accounts.studentbeans.com/oauth/authorize?client_id=263a0030-0cd7-4907-b166-125c7be90e13&amp;country=us&amp;redirect_uri=https%3A%2F%2Fsh.studentbeans.com%2Foauth%2Fcallback%2Fulikeofficial.myshopify.com&amp;response_type=code&amp;utm_source=shopify&amp;utm_content=landing_page_button"
+              class="sb-lp__link-container">
+              <img class="sb-lp__link-img" alt="SB logo" src="https://sh.studentbeans.com/assets/Union.svg" />
+              <span class="sb-lp__vertical-divider"></span>
+              <span class="sb-lp__link-text">Verify Student Status</span>
+            </a>
+            <div class="list-right">
+              <a href="https://discountify.id.me/oauth/checkpoint/ulikeofficial/verified">
+                <img src="https://s3.amazonaws.com/idme/developer/idme-buttons/assets/img/verify.svg"
+                  alt="Verify with ID.me" style="float: none" width="250" height="48" />
+              </a>
+            </div>
+          </div>
+          <div class="sb-lp__powered-by-container">
+            <p class="sb-lp__powered-by-title">&nbsp;</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

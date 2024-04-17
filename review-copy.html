@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+.review-industry{
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.review-industry .container{
+  max-width: 1400px;
+}
+.review-industry .review-industry-cont{
+  position: relative;
+  padding-top: 76px;
+  min-height: 340px;
+}
+
+.review-industry .review-industry-img-list{
+  width: 100%;
+  max-width: 985px;
+  height: 306px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.review-industry .list-box{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 306px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.review-industry .review-industry-img-list::after{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 196px;
+  height: 76px;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  --background:255,255,255;
+  background: linear-gradient(to left, rgb(var(--background)), rgba(var(--background), 0));
+  pointer-events: none;
+}
+
+.review-industry .img-item{
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  margin-right: 26px;
+  filter: grayscale(100%);
+  cursor: pointer;
+  position: relative;
+}
+
+.review-industry .img-item .img{
+  width: 76px;
+  height: 76px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.review-industry .img-item::before{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.6);
+  transition: all .4s ease;
+}
+.review-industry .img-item:hover::before{
+  opacity: 0;
+}
+.review-industry .img-item.active{
+  width: 306px;
+  margin-right: 86px;
+  filter: grayscale(0%);
+}
+
+.review-industry .img-item.active .img{
+  transition: all .4s ease;
+  width: 306px;
+  height: 306px;
+}
+.review-industry .img-item.zero-am.active .img{
+  transition: all 0s ease;
+}
+.review-industry .img-item.active::before{display: none;}
+
+.review-industry .img-item.active .img{
+  height: 306px;
+}
+
+.review-industry .review-industry-right{
+  position: relative;
+  padding-left: 392px;
+}
+
+.review-industry .review-industry-text-list{
+  position: relative;
+  margin-top: 40px;
+}
+
+.review-industry .text-item{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  z-index: 1;
+  transition: all .4s ease;
+}
+
+.review-industry .posi-item{
+  position: relative;
+  z-index: 1;
+}
+
+.review-industry .text-item.active{
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+}
+
+.review-industry .review-industry-text-p{
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all .4s ease;
+}
+
+.review-industry .review-industry-text-name{
+  position: relative;
+  padding-left: 35px;
+  margin-top: 35px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all .4s ease;
+  transition-delay: 0.1s
+}
+
+.review-industry .active .review-industry-text-p{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.review-industry .active .review-industry-text-name{
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.review-industry .review-industry-name{
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative;
+}
+
+.review-industry .review-industry-name::before{
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  background: #e6e6e6;
+  left: -35px;
+  transform: translateY(-50%);
+}
+
+.review-industry .review-industry-sub{
+  font-size: 14px;
+  color: #9f9f9f;
+  line-height: 1.2;
+}
+
+.review-industry .review-industry-arraw {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  transition: all .4s ease;
+}
+
+.review-industry .review-industry-arraw-item {
+  background: #000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all .4s ease;
+  margin-left: 40px;
+  border: 2px solid #000;
+}
+
+.review-industry .review-industry-arraw-item:hover {
+  background: #fff;
+}
+
+.review-industry .review-industry-arraw-item::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  top: 50%;
+  left: 50%;
+  margin-left: 2px;
+  transform: translate(-50% , -50%) rotate(-45deg);
+  transition: all .4s ease;
+}
+
+.review-industry .review-industry-arraw-item:hover::before {
+  border-color: #000;
+}
+
+.review-industry .review-industry-arraw-item:last-child {
+  transform: scale(-1,-1);
+}
+
+@media (max-width:991px) {
+  .review-industry{
+    padding: 60px 0;
+  }
+  .review-industry .review-industry-cont{
+    min-height: auto;
+    padding-top: 0;
+  }
+  .review-industry .review-industry-img-list{
+    max-width: none;
+    position: relative;
+    height: auto;
+  }
+  .review-industry .list-box{
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+  .review-industry .img-item{
+    width: 56%;
+    height: auto;
+  }
+  .review-industry .img-item .img{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .review-industry .img-item.active{
+    width: 56%;
+    margin-right: 26px;
+  }
+  .review-industry .img-item.active .img{
+    width: 100%;
+    height: auto;
+  }
+  .review-industry .review-industry-right{
+    padding-left: 0;
+  }
+  .review-industry .review-industry-arraw{
+    margin-top: 30px;
+    position: relative;
+    justify-content: center;
+  }
+  .review-industry .review-industry-img-list::after{
+    /* display: none; */
+    height: 100%;
+  }
+  .review-industry .review-industry-text-p{
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .review-industry .review-industry-text-list{
+    margin-top: 30px;
+  }
+  .review-industry .review-industry-text-name{
+    margin-top: 30px;
+  }
+  .review-industry .review-industry-arraw-item{
+    margin: 0 15px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="review-industry" style="display: none;">
+  <div class="container">
+    <div class="review-industry-cont">
+      <div class="review-industry-img-list to-top">
+        <div class="list-box">
+          <div class="img-item" data-index="0">
+            <img src="./images8/d1.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="1">
+            <img src="./images8/d2.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="2">
+            <img src="./images8/d3.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="3">
+            <img src="./images8/d4.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="4">
+            <img src="./images8/d5.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="5">
+            <img src="./images8/d6.png" alt="" class="img">
+          </div>
+          <div class="img-item" data-index="6">
+            <img src="./images8/d7.png" alt="" class="img">
+          </div>
+        </div>
+      </div>
+      <div class="review-industry-right to-top">
+        <div class="review-industry-text-list">
+          <div class="text-item active">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+          <div class="text-item">
+            <div class="review-industry-text-p">“What was only possible in a clinic a few years ago has become an effective and safe option for patients to undertake at the convenience and privacy of their own home.”</div>
+            <div class="review-industry-text-name">
+              <div class="review-industry-name">Dr. Davin Lim</div>
+              <div class="review-industry-sub">Board-certified dermatologist.</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-industry-arraw">
+          <div class="review-industry-arraw-item"></div>
+          <div class="review-industry-arraw-item"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function industrySwiper(name){
+    let $p = $('.' + name)
+    let $list = $p.find('.list-box')
+    let $tList = $p.find('.review-industry-text-list')
+    let length = $p.find('.img-item').length
+    let width = $p.find('.img-item').width()
+    let index = length
+    $list.html($list.html()+$list.html()+$list.html())
+    $list.find('.img-item').eq(index).addClass('active')
+    skewTranslateX(0)
+    $p.find('.review-industry-arraw-item').click(function(){
+      let tIndex = $(this).index()
+      if(tIndex){
+        index ++
+      }else{
+        index--
+      }
+      skewTranslateX()
+    })
+
+    function skewTranslateX(time = 0.4){
+      $list.find('.img-item').removeClass('active')
+      $list.find('.img-item').eq(index).addClass('active')
+      $list.css({'transform': 'translateX(-'+ index*(width + 26) +'px)','transition':' all '+ time +'s ease'})
+      
+      if(time){
+        $tList.find('.text-item.active').addClass('posi-item')
+        $tList.find('.text-item').removeClass('active')
+        setTimeout(function(){
+          let sindex = index-length
+          if(sindex == length) sindex = 0
+          if(sindex == -1) sindex = length - 1
+          $tList.find('.text-item.posi-item').removeClass('posi-item')
+          $tList.find('.text-item').eq(Math.abs(sindex)).addClass('active')
+        },450)
+      }
+      if(index==length-1){
+        setTimeout(function(){
+          index = length*2-1
+          $list.find('.img-item').eq(index).addClass('zero-am')
+          skewTranslateX(0)
+          setTimeout(function(){
+            $list.find('.img-item').eq(index).removeClass('zero-am')
+          },50)
+        },450)
+      }
+      
+      if(index==length*2){
+        setTimeout(function(){
+          index = length
+          $list.find('.img-item').eq(index).addClass('zero-am')
+          skewTranslateX(0)
+          setTimeout(function(){
+            $list.find('.img-item').eq(index).removeClass('zero-am')
+          },50)
+        },450)
+      }
+    }
+
+    $p.on('click','.img-item',function(){
+      let newIndex = $(this).data('index')*1 + length
+      let isChange = newIndex ==index
+      index = $(this).data('index')*1 + length
+      if(!isChange) skewTranslateX()
+    })
+  }
+  industrySwiper('review-industry')
+</script>
+</body>
+</html>

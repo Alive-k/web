@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <link rel="stylesheet" href="./css/bf-us.css" />
+  <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+  <div class="bg-fixed-box" style="--pc-bg-url:url(../images9/bg.jpg);--mb-bg-url:url(../images9/bg-m.jpg);"></div>
+  <div class="bf-tab-box">
+    <div class="container">
+      <div class="bf-tab-cont">
+        <div class="bf-tab-scroll">
+          <div class="bf-tab-list">
+            <div class="bf-tab-item active" data-rout="">Order and Win a Gift</div>
+            <div class="bf-tab-item" data-rout="">Holiday Bundle</div>
+            <div class="bf-tab-item" data-rout="">Air3</div>
+            <div class="bf-tab-item" data-rout="">Air+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  window.addEventListener('load',function(){
+    $('.bf-tab-box .bf-tab-item').click(function(){
+      let route=$(this).data('rout')
+      $(this).addClass('active').siblings('.bf-tab-item').removeClass('active')
+      if($('#'+route).length){
+        $("html,body").animate({scrollTop: $('#'+route).offset().top - 150}, 'slow');
+        }
+    })
+  })
+</script>
+  <div class="purchase-box">
+    <div class="container">
+      <div class="purchase-cont">
+        <div class="container">
+          <div class="purchase-cont-title">Chance to win with any purchase</div>
+          <!-- <div class="purchase-cont-link">Buy Now</div> -->
+          <div class="purchase-cont-link btn-diy">
+            <div class="btn-txt" text="Buy Now">
+              <span>Buy Now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./images10/b3.png" alt="" class="pc-box img">
+      <img src="./images10/b4.png" alt="" class="mb-box img">
+    </div>
+  </div>
+  <div class="step-box-diy">
+    <div class="container">
+      <div class="step-box-diy-flex">
+        <div class="step-box-diy-item">
+          <div class="step-box-diy-title">Winner announced <br/> every Tuesday</div>
+          <div class="step-box-diy-link">Giveaway rules</div>
+        </div>
+        <div class="step-box-diy-item">
+          <div class="step-box-diy-cont">
+            <div class="step-box-diy-cont-t">How to enter</div>
+            <div class="step-box-diy-cont-list">
+              <div class="step-box-diy-cont-item">
+                <div class="step-box-diy-sub">STEP 01</div>
+                <div class="step-box-diy-p">Get coupon</div>
+              </div>
+              <div class="step-box-diy-cont-item">
+                <div class="step-box-diy-sub">STEP 02</div>
+                <div class="step-box-diy-p">Place order</div>
+              </div>
+              <div class="step-box-diy-cont-item">
+                <div class="step-box-diy-sub">STEP 03</div>
+                <div class="step-box-diy-p">Automatically entered</div>
+              </div>
+              <div class="step-box-diy-cont-item">
+                <div class="step-box-diy-sub">STEP 04</div>
+                <div class="step-box-diy-p">Winners announced</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="step-box-popup">
+    <div class="step-box-popup-cont">
+      <div class="step-popup-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+          <path d="M0.784745 21.3978C-0.239783 22.337 -0.261127 23.2974 0.720712 24.2793C1.70255 25.2611 2.66303 25.2398 3.60218 24.2153L12.5 15.4455L21.3978 24.2153C22.337 25.2398 23.2974 25.2611 24.2793 24.2793C25.2611 23.2974 25.2398 22.337 24.2152 21.3978L15.4455 12.5L24.2152 3.60217C25.2398 2.66303 25.2611 1.70256 24.2793 0.720701C23.2974 -0.261132 22.337 -0.239775 21.3978 0.784748L12.5 9.5545L3.60218 0.784748C2.66303 -0.239775 1.70255 -0.261132 0.720712 0.720701C-0.261127 1.70256 -0.239783 2.66303 0.784745 3.60217L9.5545 12.5L0.784745 21.3978Z" fill="white"/>
+        </svg>
+      </div>
+      <div class="step-box-popup-text">
+        <div class="step-box-popup-title">Black Friday Giveaway</div>
+        <div class="step-box-popup-scoll">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load',function(){
+      if(window.innerWidth<991){
+        $('.step-box-diy .step-box-diy-cont-t').click(function(){
+          $(this).siblings('.step-box-diy-cont-list').slideToggle()
+          $(this).parents('.step-box-diy-cont').toggleClass('active')
+        })
+      }
+      $('.step-box-diy .step-box-diy-link').click(function(){
+        $('.step-box-popup').fadeIn()
+      })
+
+      $('.step-box-popup .step-popup-close').click(function(){
+        $('.step-box-popup').fadeOut()
+      })
+    })
+  </script>
+  <div class="round-box">
+    <div class="container">
+      <div class="round-box-pos pos3 pop-show pos4 cd-show" data-em="3" data-cd="4">
+        <div class="round-box-list" style="--befor-num:0;">
+          <div class="round-box-item" data-time="2023-11-14">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="21" viewBox="0 0 44 21" fill="none">
+              <path d="M22.5 0.0715332C22.5 0.0715332 13.6287 20.5001 0.5 20.5001H43.5C33.3343 20.5001 22.5 0.0715332 22.5 0.0715332Z" fill="#1C1C1C"/>
+            </svg>
+            <div class="round-box-item-title">Round 1</div>
+            <div class="round-box-item-p">Nov. 14</div>
+          </div>
+          <div class="round-box-item" data-time="2023-11-21">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="21" viewBox="0 0 44 21" fill="none">
+              <path d="M22.5 0.0715332C22.5 0.0715332 13.6287 20.5001 0.5 20.5001H43.5C33.3343 20.5001 22.5 0.0715332 22.5 0.0715332Z" fill="#1C1C1C"/>
+            </svg>
+            <div class="round-box-item-title">Round 2</div>
+            <div class="round-box-item-p">Nov. 21</div>
+          </div>
+          <div class="round-box-item" data-time="2023-11-28">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="21" viewBox="0 0 44 21" fill="none">
+              <path d="M22.5 0.0715332C22.5 0.0715332 13.6287 20.5001 0.5 20.5001H43.5C33.3343 20.5001 22.5 0.0715332 22.5 0.0715332Z" fill="#1C1C1C"/>
+            </svg>
+            <div class="round-box-item-title">Round 3</div>
+            <div class="round-box-item-p">Nov. 28</div>
+          </div>
+          <div class="round-box-item" data-time="2023-12-05">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="21" viewBox="0 0 44 21" fill="none">
+              <path d="M22.5 0.0715332C22.5 0.0715332 13.6287 20.5001 0.5 20.5001H43.5C33.3343 20.5001 22.5 0.0715332 22.5 0.0715332Z" fill="#1C1C1C"/>
+            </svg>
+            <div class="round-box-item-title">Round 4</div>
+            <div class="round-box-item-p">Dec. 5</div>
+          </div>
+        </div>
+        <div class="round-box-cont">
+          <div class="round-box-cont-item pop-list-box">
+            <div class="round-box-slide">
+              <div class="round-box-title">Announcement of winners</div>
+              <div class="round-box-slide-box">
+                <div class="round-box-slide-list">
+                  <div class="round-box-slide-text">
+                    <p><strong> a****@gmail.com won a iPhone 15 Pro Max (512G)</strong></p>
+                    <p>a****@gmail.com won a UV Sterllizer</p>
+                    <p>a****@gmail.com won a Ulike Air 3</p>
+                    <p><strong>a****@gmail.com won a Apple Watch Series 9</strong></p>
+                    <p>a****@gmail.com won a Ulike Air 3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="round-box-cont-item countdown-box">
+            <div class="round-box-countdown">
+              <div class="round-box-title">Giveaway countdown</div>
+              <div class="round-box-timer">
+                <div class="round-box-timer-item">
+                  <div class="round-box-timer-num">22</div>
+                  Days
+                </div>
+                <div class="round-box-timer-item">
+                  <div class="round-box-timer-num">22</div>
+                  Hrs
+                </div>
+                <div class="round-box-timer-item">
+                  <div class="round-box-timer-num">22</div>
+                  Mins
+                </div>
+                <div class="round-box-timer-item">
+                  <div class="round-box-timer-num">22</div>
+                  Secs
+                </div>
+              </div>
+              <div class="round-box-cont-p">
+                Winners will be notified via registered email by @ulikeglobal.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const countdown = {
+        targetDate: null,
+        timer: null,
+        $itemNum:document.querySelectorAll('.round-box .round-box-timer-item'),
+        padZero:function (num) {
+            if(num<0) return '00'
+            return num < 10 ? `0${num}` : num;
+        },
+        updateCountdown: function() {
+            const now = new Date();
+            const timeDifference = this.targetDate - now;
+
+            // 计算剩余的天数、小时、分钟和秒
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            // 更新页面上的倒计时
+            this.$itemNum[0].querySelector('.round-box-timer-num').innerHTML =this.padZero(days) 
+            this.$itemNum[1].querySelector('.round-box-timer-num').innerHTML = this.padZero(hours)
+            this.$itemNum[2].querySelector('.round-box-timer-num').innerHTML = this.padZero(minutes)
+            this.$itemNum[3].querySelector('.round-box-timer-num').innerHTML = this.padZero(seconds)
+
+            // 如果目标时间已经过去，清除定时器
+            if (timeDifference < 0) {
+                clearInterval(this.timer);
+            }
+        },
+
+        start: function(targetDateString) {
+            this.targetDate = new Date(targetDateString); // 设置目标时间
+            this.updateCountdown(); // 更新页面显示
+            this.timer = setInterval(this.updateCountdown.bind(this), 1000); // 启动倒计时
+        }
+    };
+    countdown.start('2023-11-28 00:00:00')
+    function setZoom(){
+      let $p = document.querySelector('.round-box') 
+      let $cont = $p.querySelector('.round-box-cont')
+      changeZoom()
+      function changeZoom(){
+        let zoom = $cont.offsetWidth / 1560
+        $cont.style = `--zoom-num:${zoom};`
+      }
+      window.addEventListener('resize',changeZoom)
+    }
+    if(window.innerWidth>1000){
+      setZoom()
+    }
+
+    function seamlessScroll(interval) {
+      const container = document.querySelector('.round-box');
+      const content = container.querySelector('.round-box-slide-list');
+      let scrollInterval =null
+      let scrollHeight = 0;
+      content.innerHTML += content.innerHTML;
+      function scrollUp() {
+        scrollHeight += 0.3;
+        if (scrollHeight >= content.scrollHeight / 2) {
+          scrollHeight = 0;
+        }
+        content.style.transform = `translateY(-${scrollHeight}px)`;
+      }
+  
+      function startScrolling() {
+        scrollInterval = setInterval(scrollUp, interval);
+      }
+
+      content.addEventListener('mouseenter', () => {
+        clearInterval(scrollInterval);
+      });
+  
+      content.addEventListener('mouseleave', () => {
+        scrollInterval = setInterval(scrollUp, interval);
+      });
+  
+      startScrolling();
+    }
+    seamlessScroll(16);
+    function isRun(num){
+      return num!==''&& num>=0
+    }
+    window.addEventListener('load',function(){
+      function initMargin(){
+        let $p = $('.round-box')
+        let $pos = $p.find('.round-box-pos')
+        let $tItem = $p.find('.round-box-item')
+        let em = $pos.data('em')*1 - 1
+        let cd = $pos.data('cd')*1 - 1
+        let $popList = $p.find('.pop-list-box')
+        let $cdBox = $p.find('.countdown-box')
+        let num1 = 0
+        let num2 = 0
+
+        if(window.innerWidth>991){
+          if(isRun(em)) num1 = $tItem.eq(em)[0].offsetLeft - 30
+          if(isRun(cd)) num2 = $tItem.eq(cd)[0].offsetLeft -20
+          if(em == 3){
+            num1 = $tItem.eq(em)[0].offsetLeft - $popList[0].offsetWidth + 100
+          }
+          if(cd == 3){
+            num2 = $tItem.eq(cd)[0].offsetLeft - $cdBox[0].offsetWidth + 120
+            if(em==2){
+              num1 = $tItem.eq(em)[0].offsetLeft - $popList[0].offsetWidth+100
+            }
+          }
+          if(isRun(em)) $popList.css({'transform':'translateX('+num1+'px)'})
+          if(isRun(cd)) $cdBox.css({'transform':'translateX('+(num2)+'px)'})
+        }else{
+          let h1=$popList[0].offsetHeight - 10
+          let h2=$cdBox[0].offsetHeight - 10
+          if(isRun(em)) $tItem.eq(em).find('.round-box-item-p,.round-box-item-title').css({'transform':'translateY(-31px)'})
+          if(isRun(cd)) $tItem.eq(cd).find('.round-box-item-p,.round-box-item-title').css({'transform':'translateY(-31px)'})
+          if(em==0&&cd==1||em==1&&cd==2||em==2&&cd==3) {
+            h1 += 30
+          }
+          if(cd==0&&em==1||cd==1&&em==2||cd==2&&em==3) {
+            h2 += 30
+          }
+          if(em==0){
+            $tItem.eq(em).css({'margin-top':'20px'})
+          }
+          if(cd==0){
+            $tItem.eq(cd).css({'margin-top':'20px'})
+          }
+          if(isRun(em)) $tItem.eq(em+1).css({'margin-top':+h1+'px'})
+          if(isRun(cd)) $tItem.eq(cd+1).css({'margin-top':+h2+'px'})
+          if(em==3){
+            $tItem.eq(em).css({'margin-top': +(h1 - 40)+'px','margin-bottom':'20px'})
+            $tItem.eq(em).find('.round-box-item-p,.round-box-item-title').css({'transform':'translateY(31px)'})
+            if(cd!=1 && isRun(cd)){
+              $tItem.eq(2).css({'margin-top':'50px'})
+            }
+          }
+          if(cd==3){
+            $tItem.eq(cd).css({'margin-top': +h2+'px','margin-bottom':'20px'})
+            $tItem.eq(cd).find('.round-box-item-p,.round-box-item-title').css({'transform':'translateY(31px)'})
+            if(em!=1 && isRun(em)){
+              $tItem.eq(2).css({'margin-top':'50px'})
+            }
+          }
+
+          if(isRun(em)) num1 = $tItem.eq(em)[0].offsetTop - 10
+          if(isRun(cd)) num2 = $tItem.eq(cd)[0].offsetTop - 10
+          if(isRun(em)) $popList.css({'transform':'translateY('+ num1+'px)'})
+          if(em==3){
+            $popList.css({'transform':'translateY('+ (num1 - h1 + 60)+'px)'})
+          }
+          if(isRun(cd) && cd!=3) $cdBox.css({'transform':'translateY('+ num2+'px)'})
+          if(cd == 3){
+            if(em==2){
+              $tItem.eq(3).css({'margin-top':+(h2 + 20)+'px'})
+              $tItem.eq(2).css({'margin-top':+(h1 - 35)+'px'})
+              $tItem.eq(2).find('.round-box-item-p,.round-box-item-title').css({'transform':'translateY(31px)'})
+              num1 = $tItem.eq(em)[0].offsetTop - 10
+              $popList.css({'transform':'translateY('+ (num1 - h1 + 55)+'px)'})
+            }
+            num2 = $tItem.eq(cd)[0].offsetTop - 10
+            $cdBox.css({'transform':'translateY('+ (num2 - h2 + 30)+'px)'})
+          }
+        }
+        $tItem.each(function(){
+          let index = $(this).index()
+          if( (isRun(em) && index<=em)){
+            $(this).addClass('active')
+          }
+        })
+      }
+      initMargin()
+
+      function setProgress(){
+        let $p = $('.round-box')
+        let $list = $p.find('.round-box-list')
+        let $pos = $p.find('.round-box-pos')
+        let cd = $pos.data('cd')*1 - 1
+        let $tItem = $p.find('.round-box-item')
+        let tem = +new Date()
+        let time = isRun(cd)? $tItem.eq(cd).data('time'):0
+        let time1 = 0
+        let num = isRun(cd)? $tItem.eq(cd)[0].offsetLeft:0
+        let num1 = 0
+        let beforeNum = '20px'
+
+        if(isRun(cd)){
+          num+=$tItem.eq(cd)[0].offsetWidth/2
+        }
+
+        if(cd>0){
+          time1 = $tItem.eq(cd-1).data('time')
+          num1 = $tItem.eq(cd-1)[0].offsetLeft
+          num1 += $tItem.eq(cd-1)[0].offsetWidth/2
+          if(window.innerWidth<991){
+            num = $tItem.eq(cd)[0].offsetTop
+            num += $tItem.eq(cd)[0].offsetHeight/2
+            num1 = $tItem.eq(cd-1)[0].offsetTop
+            num1 += $tItem.eq(cd-1)[0].offsetHeight/2
+          }else{
+            num1 = $tItem.eq(cd-1)[0].offsetLeft
+            num1 += $tItem.eq(cd-1)[0].offsetWidth/2
+          }
+          
+          let tem1 = +new Date(time1)
+          let tem2 = +new Date(time)
+          let diff = tem2-tem1
+          let prog = tem - tem1
+          let percent = prog/diff
+          let diffNum = num - num1
+          console.log(diffNum);
+          beforeNum = (num1 + diffNum*percent)+'px'
+        }
+        $list.attr('style','--befor-num:'+beforeNum)
+      }
+      setProgress()
+    })
+  </script>
+  <div class="turntable-box">
+    <div class="container">
+      <img src="./images10/c1.png" alt="" class="bg-img pc-box">
+      <img src="./images10/c2.png" alt="" class="bg-img mb-box">
+      <div class="turntable-cont">
+        <div class="turntable-cont-sub">Spin to win</div>
+        <div class="turntable-cont-title">Up to $100 OFF coupon</div>
+        <div class="turntable-cont-p">Expires December 3, 2023</div>
+        <div class="turntable-cont-btn btn-diy">
+          <div class="btn-txt" text="Spin to Win">
+            <span>Spin to Win</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-gift">
+    <img src="./images10/d1.png" alt="" class="bg-img pc-box">
+    <img src="./images10/d2.png" alt="" class="bg-img mb-box">
+    <div class="product-gift-cont">
+      <div class="container">
+        <div class="product-gift-text">
+          <div class="product-gift-title">Holiday Gift Set</div>
+          <div class="product-gift-sub">Get our purple edition Air 3 in a special Holiday Gift Set with a free premium skin moisturizer - just in time for the holidays!</div>
+          <div class="product-gift-price">
+            <span class="n-price">$259 </span>
+            <span class="d-price">$389</span>
+            <div class="label-p">Limited Edition</div>
+          </div>
+          <div class="product-gift-p">
+            <strong> Holiday Gift Set:</strong>
+            <br/>
+            - 1 Purple Ulike Air 3<br/>
+            - 1 Moisturizing lotion<br/>
+            - 1 Pair of UV glasses<br/>
+            - 1 Shaving razor<br/>
+            - Special holiday box
+          </div>
+          <div class="product-gift-btn">
+            <div class="product-gift-btn-item white-btn btn-diy">
+              <div class="btn-txt" text="Buy Now">
+                <span>Buy Now</span>
+              </div>
+            </div>
+            <div class="product-gift-btn-item btn-diy">
+              <div class="btn-txt" text="Add to Cart">
+                <span>Add to Cart</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-gift-copy">
+            <div class="span">Sale Coupon</div>
+              Pay now or $69.75/mo for 4 months
+              <svg xmlns="http://www.w3.org/2000/svg" width="91" height="24" viewBox="0 0 91 24" fill="none">
+                <rect width="90.566" height="24" rx="12" fill="#B2FCE4"/>
+                <path d="M20.3346 11.8796C20.3346 10.8619 19.5773 10.1471 18.6467 10.1471C17.7161 10.1471 16.9588 10.8744 16.9588 11.8796C16.9588 12.873 17.7161 13.6118 18.6467 13.6118C19.5784 13.6118 20.3346 12.8975 20.3346 11.8796ZM20.3482 14.908V14.1207C19.8891 14.6657 19.2054 15.0042 18.3874 15.0042C16.6871 15.0042 15.3965 13.6717 15.3965 11.8796C15.3965 10.0989 16.7363 8.74255 18.4254 8.74255C19.2201 8.74255 19.8897 9.08222 20.3488 9.61426V8.85125H21.8754V14.908H20.3482ZM29.2894 13.563C28.7551 13.563 28.6068 13.3695 28.6068 12.8612V10.1719H29.5876V8.85068H28.6068V7.37337H27.0422V8.85068H25.0271V8.48274C25.0271 7.97343 25.2264 7.77933 25.7726 7.77933H26.1156V6.60463H25.3628C24.0722 6.60463 23.4643 7.0167 23.4643 8.27622V8.8501H22.5954V10.1719H23.4643V14.9074H25.0288V10.1719H27.0439V13.1397C27.0439 14.3753 27.5273 14.9085 28.7929 14.9085H29.6002V13.5636L29.2894 13.563ZM34.8995 11.334C34.7879 10.5471 34.1296 10.0745 33.3605 10.0745C32.5906 10.0745 31.9577 10.5347 31.797 11.334H34.8995ZM31.784 12.2793C31.896 13.1752 32.5537 13.6847 33.3853 13.6847C34.043 13.6847 34.5525 13.3814 34.8496 12.8969H36.4515C36.0786 14.1807 34.8995 15.0042 33.3478 15.0042C31.4743 15.0042 30.1588 13.721 30.1588 11.8914C30.1588 10.0626 31.549 8.74217 33.3864 8.74217C35.2357 8.74217 36.5755 10.0745 36.5755 11.8914C36.5755 12.0252 36.5636 12.1576 36.5388 12.2793H31.784ZM46.5213 11.8796C46.5213 10.898 45.764 10.1471 44.8335 10.1471C43.9029 10.1471 43.1455 10.8744 43.1455 11.8796C43.1455 12.873 43.9029 13.6118 44.8335 13.6118C45.764 13.6118 46.5213 12.8612 46.5213 11.8796ZM41.6059 8.85125H43.1325V9.63871C43.591 9.08107 44.2738 8.74255 45.0933 8.74255C46.7687 8.74255 48.0836 10.0875 48.0836 11.8672C48.0836 13.6484 46.7439 15.0054 45.0559 15.0054C44.2737 15.0054 43.6284 14.702 43.1823 14.1937V17.4002H41.6059V8.85125ZM53.5856 11.8796C53.5856 10.8619 52.8294 10.1471 51.8977 10.1471C50.9672 10.1471 50.2097 10.8744 50.2097 11.8796C50.2097 12.873 50.9672 13.6118 51.8977 13.6118C52.8294 13.6118 53.5856 12.8975 53.5856 11.8796ZM53.5991 14.908V14.1207C53.1401 14.6657 52.4563 15.0042 51.6385 15.0042C49.9381 15.0042 48.6474 13.6717 48.6474 11.8796C48.6474 10.0989 49.9873 8.74255 51.6757 8.74255C52.4699 8.74255 53.1401 9.08222 53.5991 9.61426V8.85125H55.1251V14.908H53.5991ZM38.8549 9.44519C38.8549 9.44519 39.2433 8.74312 40.1947 8.74312C40.6018 8.74312 40.865 8.87914 40.865 8.87914V10.4243C40.865 10.4243 40.291 10.0785 39.7635 10.1482C39.2359 10.2178 38.9025 10.6904 38.9042 11.3233V14.9091H37.3283V8.8524H38.8549V9.44519ZM62.254 8.85125L58.4003 17.381H56.7753L58.2884 14.0832L55.7298 8.85125H57.5716L59.0684 12.3473L60.604 8.85125H62.254ZM74.5557 8.7137L70.7349 6.56222C69.6141 5.93055 68.2121 6.71964 68.2121 7.98412V8.20496C68.2121 8.40422 68.3214 8.58876 68.4981 8.68772L69.2196 9.09406C69.4313 9.21422 69.6951 9.06464 69.6951 8.82642V8.27737C69.6951 8.00285 69.9996 7.83072 70.243 7.96827L73.5522 9.83281C73.7956 9.96978 73.7956 10.3129 73.5522 10.4499L70.243 12.3138C69.9996 12.4508 69.6957 12.2798 69.6957 12.0047V11.7126C69.6957 10.4487 68.2937 9.65801 67.1711 10.2907L63.3503 12.4428C63.0957 12.5828 62.8832 12.7886 62.7352 13.0386C62.5871 13.2889 62.5092 13.5741 62.5092 13.8647C62.5092 14.1554 62.5871 14.4407 62.7352 14.6907C62.8832 14.941 63.0957 15.1467 63.3503 15.2866L67.1711 17.4383C68.2925 18.0698 69.6957 17.2808 69.6957 16.0164V15.7955C69.6951 15.6969 69.6682 15.6001 69.6179 15.5153C69.5675 15.4304 69.4955 15.3605 69.4093 15.3128L68.6882 14.9051C68.4765 14.7857 68.2121 14.9351 68.2121 15.1735V15.7225C68.2121 15.9971 67.9076 16.1686 67.6648 16.0311L64.3552 14.1671C64.3 14.1365 64.2539 14.0918 64.2219 14.0376C64.1898 13.9831 64.1728 13.9212 64.1728 13.8582C64.1728 13.7951 64.1898 13.7333 64.2219 13.679C64.2539 13.6245 64.3 13.5798 64.3552 13.5495L67.6648 11.6849C67.9081 11.5474 68.2121 11.7189 68.2121 11.994V12.2861C68.2121 13.55 69.6137 14.3408 70.7349 13.708L74.5557 11.5558C74.8102 11.4159 75.0224 11.2104 75.1703 10.9605C75.3182 10.7104 75.3961 10.4254 75.3961 10.135C75.3961 9.84465 75.3182 9.55962 75.1703 9.30974C75.0224 9.05986 74.8102 8.85354 74.5557 8.7137Z" fill="black"/>
+              </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load',function(){
+        
+    })
+  </script>
+  <div class="text-image-box">
+    <div class="container">
+      <div class="text-image-box-cont">
+        <div class="text-image-img">
+          <img src="./images10/f1.png" alt="" class="img">
+        </div>
+        <div class="text-image-text">
+          <div>
+            <img src="./images10/f2.svg" alt="" class="icon-img">
+            <div class="text-image-box-title">90-Day Guarantee</div>
+            <div class="text-image-box-p">Not happy with your results? Enjoy a hassle-free full refund.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

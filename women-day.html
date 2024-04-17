@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <link rel="stylesheet" href="./css/women-day.css">
+  <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="text-animation">
+    <div class="container">
+      <div class="text-animation-cont" style="--num-backgroundSize:0%;">
+        <span>
+          We know women make the world go round — While Ulike IPL isn't quite there, it does give you smooth skin that
+          lasts a lifetime.
+        </span>
+      </div>
+    </div>
+  </div>
+  <script>
+    function handleScroll() {
+      let textElement = document.querySelector('.text-animation-cont');
+      let scrollPosition = window.scrollY;
+      let windowHeight = window.innerHeight;
+      let reat = textElement.getBoundingClientRect()
+      let scrollThresholdStart = windowHeight * 0.2; // 设置动画开始的滚动位置为页面高度的 20%
+      let scrollThresholdEnd = windowHeight * 0.8; // 设置动画结束的滚动位置为页面高度的 80%
+      // 根据滚动位置计算背景大小
+      let backgroundSize = (1 - (reat.top - windowHeight * 0.2) / (windowHeight * 0.6)) * 100;
+
+      // 如果滚动位置在阈值范围内，则显示文本并设置背景大小
+      if (reat.top >= scrollThresholdStart && reat.top <= scrollThresholdEnd) {
+        textElement.style = '--num-backgroundSize:' + backgroundSize + '%'
+      }
+      if (reat.top < scrollThresholdStart) {
+        textElement.style = '--num-backgroundSize:100%'
+      }
+      if (reat.top > scrollThresholdEnd) {
+        textElement.style = '--num-backgroundSize:0%'
+      }
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', handleScroll);
+
+    // 页面加载完成时触发一次滚动事件，以确保初始状态正确
+    window.addEventListener('load', handleScroll);
+  </script>
+  <div class="slide-diy">
+    <div class="container">
+      <div class="slide-diy-title to-top">Loved by over 4,000,000 users worldwide.</div>
+      <div class="slide-diy-cont">
+        <div class="slide-diy-left to-top" style="transition-delay: 0.2s">
+          <div class="slide-diy-img">
+            <div class="slide-diy-img-item">
+              <img src="./images23/d1.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d2.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d1.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d2.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-txt">BEFORE</div>
+          </div>
+          <div class="slide-diy-img">
+            <div class="slide-diy-img-item">
+              <img src="./images23/d2.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d1.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d2.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./images23/d1.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-txt">AFTER</div>
+          </div>
+        </div>
+        <div class="slide-diy-right to-top">
+          <div>
+            <div class="slide-diy-img-list to-top" style="transition-delay: 0.3s">
+              <div class="slide-diy-list">
+                <img src="./images23/d3.png" alt="" class="img" data-index="1">
+                <img src="./images23/d4.png" alt="" class="img" data-index="2">
+                <img src="./images23/d5.png" alt="" class="img" data-index="3">
+                <img src="./images23/d6.png" alt="" class="img" data-index="4">
+              </div>
+            </div>
+            <div class="slide-diy-arraw">
+              <div class="slide-diy-arraw-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path
+                    d="M13.7499 5.73242L4.48218 15.0002L13.7499 24.268L15.5177 22.5002L9.26771 16.2502H24.9999V13.7502H9.26771L15.5177 7.50019L13.7499 5.73242Z"
+                    fill="#3F3636" />
+                </svg>
+              </div>
+              <div class="slide-diy-arraw-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                  <path
+                    d="M16.25 5.73242L25.5178 15.0002L16.25 24.268L14.4822 22.5002L20.7322 16.2502H5V13.7502H20.7322L14.4822 7.50019L16.25 5.73242Z"
+                    fill="#3F3636" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="slide-diy-bottom to-top" style="transition-delay: 0.4s">
+            <div class="slide-diy-text">
+              <div class="slide-diy-txt-item">
+                <div class="slide-diy-txt-h3">— Shayden Thomas</div>
+                <div class="slide-diy-txt-p">
+                  "After three weeks I noticed my leg hair had really thinned down. And the hair on my sto mach has
+                  already completely disappeared."
+                </div>
+              </div>
+              <div class="slide-diy-txt-item">
+                <div class="slide-diy-txt-h3">— Shayden Thomas</div>
+                <div class="slide-diy-txt-p">
+                  "After three weeks I noticed my leg hair had really thinned down. And the hair on my sto mach has
+                  already completely disappeared."
+                </div>
+              </div>
+              <div class="slide-diy-txt-item">
+                <div class="slide-diy-txt-h3">— Shayden Thomas</div>
+                <div class="slide-diy-txt-p">
+                  "After three weeks I noticed my leg hair had really thinned down. And the hair on my sto mach has
+                  already completely disappeared."
+                </div>
+              </div>
+              <div class="slide-diy-txt-item">
+                <div class="slide-diy-txt-h3">— Shayden Thomas</div>
+                <div class="slide-diy-txt-p">
+                  "After three weeks I noticed my leg hair had really thinned down. And the hair on my sto mach has
+                  already completely disappeared."
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="slide-diy-dot to-top" style="transition-delay: 0.4s">
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      function slideDiySwiper() {
+        const content = document.querySelector('.slide-diy .slide-diy-cont');
+        let $p = $('.slide-diy')
+        let $imgBox = $p.find('.slide-diy-img')
+        let $imgSm = $p.find('.slide-diy-list')
+        let $txt = $p.find('.slide-diy-text')
+        let $arraw = $p.find('.slide-diy-arraw')
+        let $dot = $p.find('.slide-diy-dot-item')
+        let length = $imgSm.find('.img').length
+        let width = $imgSm.find('.img')[0].offsetWidth
+        let txtWidth = $txt.find('.slide-diy-txt-item')[0].offsetWidth
+        let index = 0
+        let smInex = length + index
+        let time = +new Date()
+        let timerIn = null
+        $imgSm.html($imgSm.html().repeat(3))
+
+        function changeTransform(bol) {
+          if (index == length) {
+            index = 0
+            $imgSm.css({ 'transform': 'translateX(-' + (width + 10) * (length - 1) + 'px)', 'transition': 'none' })
+          }
+          if (index == -1) {
+            index = length - 1
+            $imgSm.css({ 'transform': 'translateX(-' + (width + 10) * (length + length) + 'px)', 'transition': 'none' })
+          }
+          smInex = length + index
+          $imgBox.each(function () {
+            $(this).find('.slide-diy-img-item.close').removeClass('close')
+            $(this).find('.slide-diy-img-item.active').removeClass('active').addClass('close')
+            $(this).find('.slide-diy-img-item').eq(index).addClass('active')
+            setTimeout(() => {
+              $(this).find('.slide-diy-img-item.close').removeClass('close')
+            }, 600)
+          })
+
+          $imgSm.find('.img').removeClass('active')
+          setTimeout(() => {
+            $imgSm.find('.img').eq(smInex).addClass('active')
+          }, 100)
+
+          $txt.find('.slide-diy-txt-item').css({ 'transform': 'translateX(-' + (txtWidth + 100) * index + 'px)', 'transition': 'transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1)' })
+          $dot.removeClass('active').eq(index).addClass('active')
+          setTimeout(() => {
+            if (bol) {
+              $imgSm.css({ 'transform': 'translateX(-' + (width + 10) * smInex + 'px)' })
+            } else {
+              $imgSm.css({ 'transform': 'translateX(-' + (width + 10) * smInex + 'px)', 'transition': 'transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1)' })
+            }
+          }, 10);
+          timerIn = setTimeout(function () {
+            index++
+            changeTransform()
+          }, 5000)
+        }
+        changeTransform(true)
+        $arraw.find('.slide-diy-arraw-item').click(function () {
+          let sindex = $(this).index()
+          let clickTime = +new Date()
+          if (clickTime - time < 800) return
+          time = +new Date()
+          index += sindex ? 1 : -1
+          clearTimeout(timerIn)
+          changeTransform()
+        })
+
+        $imgSm.on('click', '.img', function () {
+          let sindex = $(this).attr('data-index') * 1 - 1
+          let clickTime = +new Date()
+          if (clickTime - time < 800 || index == sindex) return
+          time = +new Date()
+          index = sindex
+          clearTimeout(timerIn)
+          changeTransform()
+        })
+
+        detectSwipe(content, () => {
+          index += 1
+          clearTimeout(timerIn)
+          changeTransform()
+        }, () => {
+          index -= 1
+          clearTimeout(timerIn)
+          changeTransform()
+        });
+
+
+        function detectSwipe(element, onSwipeLeft, onSwipeRight) {
+          let startX = 0;
+
+          const getEventX = (event) => {
+            return event.touches ? event.touches[0].clientX : event.clientX;
+          };
+
+          const handleTouchStart = (e) => {
+            startX = getEventX(e);
+          };
+
+          const handleTouchMove = (e) => {
+            const deltaX = getEventX(e) - startX;
+            if (Math.abs(deltaX) > 10 && e.cancelable) {
+              e.preventDefault();
+            }
+          };
+
+          const handleTouchEnd = (e) => {
+            const deltaX = getEventX(e.changedTouches ? e.changedTouches[0] : e) - startX;
+            if (deltaX > 10) {
+              onSwipeRight();
+            } else if (deltaX < -10) {
+              onSwipeLeft();
+            }
+          };
+
+          element.addEventListener('touchstart', handleTouchStart);
+          element.addEventListener('touchmove', handleTouchMove);
+          element.addEventListener('touchend', handleTouchEnd);
+
+          // Add mouse event listeners for PC compatibility
+          element.addEventListener('mousedown', handleTouchStart);
+          element.addEventListener('mousemove', handleTouchMove);
+          element.addEventListener('mouseup', handleTouchEnd);
+        }
+      }
+      slideDiySwiper()
+    })
+  </script>
+  <div class="module-full" style="--num-translateY:0%;">
+    <div class="module-full-cont">
+      <img src="./images23/b1.jpg" alt="" class="img pc-img">
+      <img src="./images23/b2.jpg" alt="" class="img mb-img">
+      <div class="module-full-text">
+        <div class="container">
+          <div class="module-full-h3">You'll feel the difference.</div>
+          <div class="module-full-p">Transform your hair removal routine from chore to well-deserved me time. With Ulike IPL, you not only save time and money, but removing your hair becomes a sacred and beautiful self-care ritual — all from the comfort of home.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function moduleFullScroll() {
+      let moduleFull = document.querySelector('.module-full');
+      let windowHeight = window.innerHeight - 80;
+      let reat = moduleFull.getBoundingClientRect()
+
+      if(reat.top<windowHeight && reat.bottom > windowHeight){
+        moduleFull.style ='--num-translateY:-'+(reat.bottom - windowHeight -80) /windowHeight *100+ '%'
+      }
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', moduleFullScroll);
+
+    // 页面加载完成时触发一次滚动事件，以确保初始状态正确
+    window.addEventListener('load', moduleFullScroll);
+  </script>
+  <div class="module-list">
+    <div class="container">
+      <div class="module-list-h3 to-top">
+        Most powerful IPL hair removal solution.
+      </div>
+      <div class="module-list-box">
+        <div class="module-list-item to-top" style="transition-delay: 0.1s">
+          <div class="module-list-img">
+            <img src="./images23/c1.png" alt="" class="img">
+          </div>
+          <div class="module-list-text">
+            <div class="module-list-sub">Sapphire Ice-Cooling™</div>
+            <div class="module-list-h5">Unrivaled skin protection.</div>
+            <div class="module-list-p">Expert-backed, clinically tested, and over a decade of pioneering breakthroughs in IPL skin safety, including our built-in UV filter and patented Sapphire Ice-Cooling Technology™ for painless hair removal.</div>
+          </div>
+        </div>
+        <div class="module-list-item to-top" style="transition-delay: 0.2s">
+          <div class="module-list-img">
+            <img src="./images23/c2.png" alt="" class="img">
+          </div>
+          <div class="module-list-text">
+            <div class="module-list-sub">Laser-like Results, From Home</div>
+            <div class="module-list-h5">Cheaper than razors, effective like laser.</div>
+            <div class="module-list-p">Say goodbye to the endless cycle of razors and inconvenient trips to the clinic. With Air 3, get laser-like results from the comfort of your home.</div>
+          </div>
+        </div>
+        <div class="module-list-item to-top" style="transition-delay: 0.3s">
+          <div class="module-list-img">
+            <img src="./images23/c3.png" alt="" class="img">
+          </div>
+          <div class="module-list-text">
+            <div class="module-list-sub">AutoGlide Mode</div>
+            <div class="module-list-h5">12 Minute full-body sessions.</div>
+            <div class="module-list-p">Introducing, for the first time ever — Thumbs-Free AutoGlide Mode! Experience even faster full-body sessions, with a flash to the skin every 0.7 seconds.</div>
+          </div>
+        </div>
+      </div>
+      <div class="module-list-dot to-top" style="transition-delay: 0.3s">
+        <div class="module-list-dot-item active"></div>
+        <div class="module-list-dot-item"></div>
+        <div class="module-list-dot-item"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    
+    window.addEventListener('load',function(){
+      function returnFlowSwiper(){
+        let time = +new Date()
+        let $p = $('.module-list')
+        let $list = $p.find('.module-list-box')
+        let $dot = $p.find('.module-list-dot-item')
+        const content = document.querySelector('.module-list .module-list-box');
+        let length = $list.find('.module-list-item').length
+        let width = $list.find('.module-list-item')[0].offsetWidth
+        let index = 0
+        let pWidth = $p[0].offsetWidth
+        let lWidth = length * (width + 20) + $list[0].offsetLeft
+        let translateX = 0
+
+        function changeTransform(num){
+          index+=num
+          translateX += (width + 20) * num
+          if(translateX > lWidth - pWidth) {
+            translateX = lWidth - pWidth
+          }
+          if(translateX<0) translateX = 0
+          if(index>=length) index = length - 1
+          if(index<0) index = 0
+          $dot.removeClass('active').eq(index).addClass('active')
+          $list.css({
+            transform: 'translateX(-' + translateX + 'px)',
+            transition: 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s'
+          })
+        }
+
+        detectSwipe(content, () => {
+          changeTransform(1)
+        }, () => {
+          changeTransform(-1)
+        });
+      }
+
+      function detectSwipe(element, onSwipeLeft, onSwipeRight) {
+        let startX = 0;
+
+        element.addEventListener('touchstart', (e) => {
+          startX = e.touches[0].clientX;
+        });
+
+        element.addEventListener('touchmove', (e) => {
+          const deltaX = e.touches[0].clientX - startX;
+          if (deltaX > 10) {
+            if (e.cancelable) {
+              e.preventDefault();
+            }
+          } else if (deltaX < -10) {
+            if (e.cancelable) {
+              e.preventDefault();
+            }
+          }
+        });
+
+        element.addEventListener('touchend', (e) => {
+          const deltaX = e.changedTouches[0].clientX - startX;
+          if (deltaX > 10) {
+            onSwipeRight()
+          } else if (deltaX < -10) {
+            onSwipeLeft()
+          }
+        });
+      }
+      if(window.innerWidth<865){
+        returnFlowSwiper()
+      }
+    })
+    
+  
+  </script>
+  <div class="module-image-icon to-top">
+    <div class="container">
+      <div class="module-image-icon-box">
+        <div class="module-image-icon-text">
+          <div class="module-image-icon-h3 to-top" style="transition-delay: 0.1s">90-Day Guarantee</div>
+          <div class="module-image-icon-p to-top" style="transition-delay: 0.2s">Not happy with your results? Enjoy a hassle-free full refund.</div>
+          <img src="./images23/e2.svg" alt="" class="svg-img pc-img to-top" style="transition-delay: 0.3s">
+        </div>
+        <img src="./images23/e1.jpg" alt="" class="img pc-img">
+        <img src="./images23/e3.jpg" alt="" class="img mb-img">
+      </div>
+    </div>
+  </div>
+  <div class="module-pcos-image to-top">
+    <img src="./images23/f1.png" alt="" class="img pc-img">
+    <img src="./images23/f2.jpg" alt="" class="img mb-img">
+    <div class="module-pcos-image-text">
+      <div class="module-pcos-image-h3 to-top" style="transition-delay: 0.1s">Proud sponsors of PCOS CON 2023.</div>
+      <div class="module-pcos-image-p to-top" style="transition-delay: 0.2s">Beauty is not just about looking good, it's about feeling good too. Join us in celebrating a decade of empowering women with innovative IPL beauty solutions from the comfort of home.</div>
+      <a href="#" class="module-pcos-image-link btn-diy to-top" style="transition-delay: 0.3s">
+          <div class="btn-txt" text="Learm more">
+            <span>Learm more</span>
+          </div>
+      </a>
+    </div>
+  </div>
+</body>
+<script src="./js/script.js"></script>
+
+</html>

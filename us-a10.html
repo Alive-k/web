@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <link rel="stylesheet" href="./css/us-a10.css" />
+  <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+  <div class="preheat-tab-box">
+    <div class="container">
+      <div class="preheat-tab">
+        <div class="preheat-tab-item active">
+          1Sneak Peak
+        </div>
+        <div class="preheat-tab-item">
+          2Launching on April 5
+        </div>
+        <div class="preheat-tab-item">
+          3Get Early Bird Benefits
+        </div>
+        <span class="preheat-tab-line"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load', function () {
+      setLoc(0)
+      $('.preheat-tab-box').on('click', '.preheat-tab-item', function () {
+        let index = $(this).index();
+        setLoc(index)
+      })
+      function setLoc(index){
+        let $line = $('.preheat-tab-box').find('.preheat-tab-line')
+        let leftNum = index * 33.333 + '%'
+        let addWidth = 0
+        let pWidth = (document.querySelector('.preheat-tab-box').offsetWidth - document.querySelector('.preheat-tab-box .preheat-tab').offsetWidth) / 2
+        if(index !=1){
+          addWidth += pWidth
+        }else{
+          addWidth = 0
+        }
+        if(index == 0){
+          leftNum = -pWidth + 'px'
+        }
+        $line.css({'width':`calc(33.333% + ${addWidth}px)`, 'left': leftNum})
+      }
+    })
+  </script>
+  <div class="preheat-list-box">
+    <div class="container">
+      <div class="title-diy">The quickest, safest, and most effective IPL device on the market.</div>
+      <div class="preheat-list">
+        <div class="preheat-list-item">
+          <img src="./images25/a1.png" alt="" class="img pc-box">
+          <img src="./images25/a1.png" alt="" class="img mb-box">
+          <div class="preheat-list-text">Quickest</div>
+          <div class="preheat-text-box">
+            <img src="./images25/a1.svg" alt="" class="preheat-list-icon">
+            <div class="preheat-list-p">2x faster than any other IPL on the market</div>
+          </div>
+        </div>
+        <div class="preheat-list-item">
+          <img src="./images25/a2.png" alt="" class="img pc-box">
+          <img src="./images25/a2.png" alt="" class="img mb-box">
+          <div class="preheat-list-text">Safest</div>
+          <div class="preheat-text-box">
+            <img src="./images25/a2.svg" alt="" class="preheat-list-icon">
+            <div class="preheat-list-p">Triple skin protection system</div>
+          </div>
+        </div>
+        <div class="preheat-list-item">
+          <img src="./images25/a3.png" alt="" class="img pc-box">
+          <img src="./images25/a3.png" alt="" class="img mb-box">
+          <div class="preheat-list-text">Most effective</div>
+          <div class="preheat-text-box">
+            <img src="./images25/a3.svg" alt="" class="preheat-list-icon">
+            <div class="preheat-list-p">Visible results in just 1 week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/theme.js"></script>
+<script src="./js/script.js"></script>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/comm.css" />
+  <link rel="stylesheet" href="./css/uk-y.css" />
+  <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+  <div class="slide-marquee to-top">
+    <div class="slide-marquee-img">
+      <img src="./uk-images/s1.svg" alt="" class="img">
+      <img src="./uk-images/s1.svg" alt="" class="img">
+    </div>
+  </div>
+  <script>
+    function slideMarqueeFn(){
+      let content = document.querySelector(".slide-marquee")
+      let ul = content.querySelector(".slide-marquee-img")
+      let $img = ul.querySelectorAll('.img')
+      let speed = 1;
+      let width = content.clientWidth
+      let swidth = ($img[0].clientWidth+100) * $img.length
+      let left = 0
+      if(width>swidth) return
+      ul.innerHTML += ul.innerHTML
+      function run() {
+        if (left >= swidth) {
+          left = 0
+        }
+        left+=speed
+        ul.style.transform = 'translateX(-'+ left +'px)'
+      }
+      let timer = setInterval(run, 15)
+      content.onmouseover = function() {
+        clearInterval(timer)
+      }
+      content.onmouseout = function() {
+        timer = setInterval(run, 15)
+      }
+    }
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        slideMarqueeFn()
+      }, 1000);
+    })
+  </script>
+  <div class="slide-diy">
+    <div class="container">
+      <div class="slide-diy-title to-top">New Year, New You</div>
+      <div class="slide-diy-sub to-top" style="transition-delay: 0.1s">Beauty transcends mere aesthetics; it's about embracing a sense of well-being. This new year, take a small yet impactful step to redefine your journey. We aim to bring people together in a journey of self-love and acceptance, redefining beauty beyond the surface transformations.</div>
+      <div class="slide-diy-cont">
+        <div class="slide-diy-left to-top" style="transition-delay: 0.2s">
+          <div class="slide-diy-img">
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a11.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a21.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a31.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a41.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-txt">BEFORE</div>
+          </div>
+          <div class="slide-diy-img">
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a12.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a22.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a32.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-item">
+              <img src="./uk-images/a42.png" alt="" class="img">
+            </div>
+            <div class="slide-diy-img-txt">AFTER</div>
+          </div>
+        </div>
+        <div class="slide-diy-right to-top">
+          <div class="slide-diy-img-list to-top" style="transition-delay: 0.3s">
+            <div class="slide-diy-list">
+              <img src="./uk-images/a1.png" alt="" class="img" data-index="1">
+              <img src="./uk-images/a2.png" alt="" class="img" data-index="2">
+              <img src="./uk-images/a3.png" alt="" class="img" data-index="3">
+              <img src="./uk-images/a4.png" alt="" class="img" data-index="4">
+            </div>
+          </div>
+          <div class="slide-diy-bottom to-top" style="transition-delay: 0.4s">
+            <div class="slide-diy-text">
+              <div class="slide-diy-txt-item">
+                Struggling with public speaking always, spurred by intriguing surveys, I decided to make a change in the new year by incorporating more substantial movements. Surprisingly, these small adjustments made a big difference.
+              </div>
+              <div class="slide-diy-txt-item">
+                 I decided to make a change in the new year by incorporating more substantial movements. Surprisingly, these small adjustments made a big difference.
+              </div>
+              <div class="slide-diy-txt-item">
+                always, spurred by intriguing surveys, I decided to make a change in the new year by incorporating more substantial movements. Surprisingly, these small adjustments made a big difference.
+              </div>
+              <div class="slide-diy-txt-item">
+                Struggling with public speaking always, spurred by substantial movements. Surprisingly, these small adjustments made a big difference.
+              </div>
+            </div>
+            <div class="slide-diy-arraw">
+              <div class="slide-diy-arraw-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <path d="M18.3333 7.64307L5.97632 20.0001L18.3333 32.3571L20.6904 30.0001L12.357 21.6668H33.3333V18.3334H12.357L20.6904 10.0001L18.3333 7.64307Z" fill="black"/>
+                </svg>
+              </div>
+              <div class="slide-diy-arraw-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                  <path d="M22.1666 7.64307L34.5236 20.0001L22.1666 32.3571L19.8096 30.0001L28.1429 21.6668H7.16663V18.3334H28.1429L19.8096 10.0001L22.1666 7.64307Z" fill="black"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-diy-dot to-top" style="transition-delay: 0.4s">
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+        <div class="slide-diy-dot-item"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('load',function(){
+      function slideDiySwiper(){
+        const content = document.querySelector('.slide-diy .slide-diy-cont');
+        let $p = $('.slide-diy')
+        let $imgBox = $p.find('.slide-diy-img')
+        let $imgSm = $p.find('.slide-diy-list')
+        let $txt = $p.find('.slide-diy-text')
+        let $arraw = $p.find('.slide-diy-arraw')
+        let $dot = $p.find('.slide-diy-dot-item')
+        let length = $imgSm.find('.img').length
+        let width = $imgSm.find('.img')[0].offsetWidth
+        let txtWidth = $txt.find('.slide-diy-txt-item')[0].offsetWidth
+        let index = 0
+        let smInex = length + index + 1
+        let time = +new Date()
+        let timerIn = null
+        $imgSm.html($imgSm.html().repeat(3))
+
+        function changeTransform(bol){
+          if(index == length){
+            index = 0
+            $imgSm.css({'transform': 'translateX(-'+ (width + 25) * length +'px)','transition':'none'})
+          }
+          if(index == -1){
+            index = length - 1
+            $imgSm.css({'transform': 'translateX(-'+ (width + 25) * (length + length + 1) +'px)','transition':'none'})
+          }
+          smInex = length + index + 1
+          $imgBox.each(function(){
+            $(this).find('.slide-diy-img-item.close').removeClass('close')
+            $(this).find('.slide-diy-img-item.active').removeClass('active').addClass('close')
+            $(this).find('.slide-diy-img-item').eq(index).addClass('active')
+            setTimeout(()=>{
+              $(this).find('.slide-diy-img-item.close').removeClass('close')
+            },600)
+          })
+
+          $txt.find('.slide-diy-txt-item').css({'transform': 'translateX(-'+ (txtWidth + 100) * index +'px)','transition': 'transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+          $dot.removeClass('active').eq(index).addClass('active')
+          setTimeout(() => {
+            if(bol){
+              $imgSm.css({'transform': 'translateX(-'+ (width + 25) * smInex +'px)'})
+            }else{
+              $imgSm.css({'transform': 'translateX(-'+ (width + 25) * smInex +'px)','transition': 'transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+            }
+          }, 10);
+          timerIn = setTimeout(function(){
+            index++
+            changeTransform()
+          },3000)
+        }
+        changeTransform(true)
+        $arraw.find('.slide-diy-arraw-item').click(function(){
+          let sindex=$(this).index()
+          let clickTime = +new Date()
+          if(clickTime - time<800) return
+          time = +new Date()
+          index += sindex? 1 : -1
+          clearTimeout(timerIn)
+          changeTransform()
+        })
+
+        $imgSm.on('click','.img',function(){
+          let sindex = $(this).attr('data-index')*1 - 1
+          let clickTime = +new Date()
+          if(clickTime - time<800) return
+          time = +new Date()
+          index = sindex
+          clearTimeout(timerIn)
+          changeTransform()
+        })
+
+        
+
+
+        detectSwipe(content, () => {
+          index +=1
+          clearTimeout(timerIn)
+          changeTransform()
+        }, () => {
+          index -=1
+          clearTimeout(timerIn)
+          changeTransform()
+        });
+
+
+        function detectSwipe(element, onSwipeLeft, onSwipeRight) {
+          let startX = 0;
+
+          const getEventX = (event) => {
+            return event.touches ? event.touches[0].clientX : event.clientX;
+          };
+
+          const handleTouchStart = (e) => {
+            startX = getEventX(e);
+          };
+
+          const handleTouchMove = (e) => {
+            const deltaX = getEventX(e) - startX;
+            if (Math.abs(deltaX) > 10 && e.cancelable) {
+              e.preventDefault();
+            }
+          };
+
+          const handleTouchEnd = (e) => {
+            const deltaX = getEventX(e.changedTouches ? e.changedTouches[0] : e) - startX;
+            if (deltaX > 10) {
+              onSwipeRight();
+            } else if (deltaX < -10) {
+              onSwipeLeft();
+            }
+          };
+
+          element.addEventListener('touchstart', handleTouchStart);
+          element.addEventListener('touchmove', handleTouchMove);
+          element.addEventListener('touchend', handleTouchEnd);
+
+          // Add mouse event listeners for PC compatibility
+          element.addEventListener('mousedown', handleTouchStart);
+          element.addEventListener('mousemove', handleTouchMove);
+          element.addEventListener('mouseup', handleTouchEnd);
+        }
+      }
+      slideDiySwiper()
+    })
+  </script>
+  <div class="bothway-slide">
+    <div class="container">
+      <div class="bothway-slide-box to-top">
+        <div class="bothway-slide-txt" >
+          <img src="./uk-images/b11.png" alt="" class="txt-img pc-box">
+          <img src="./uk-images/b13.svg" alt="" class="txt-img mb-box">
+        </div>
+        <div class="bothway-slide-img to-top" style="transition-delay: 0.1s">
+          <div class="bothway-slide-list">
+            <img src="./uk-images/b1.png" alt="" class="img to-top" style="transition-delay: 0.1s">
+            <img src="./uk-images/b2.png" alt="" class="img to-top" style="transition-delay: 0.2s">
+            <img src="./uk-images/b3.png" alt="" class="img to-top" style="transition-delay: 0.3s">
+            <img src="./uk-images/b4.png" alt="" class="img to-top" style="transition-delay: 0.4s">
+            <img src="./uk-images/b5.png" alt="" class="img to-top" style="transition-delay: 0.5s">
+          </div>
+        </div>
+      </div>
+      <div class="bothway-slide-box flip-bothway to-top">
+        <div class="bothway-slide-txt">
+          <img src="./uk-images/b12.png" alt="" class="txt-img pc-box">
+          <img src="./uk-images/b14.svg" alt="" class="txt-img mb-box">
+        </div>
+        <div class="bothway-slide-img to-top" style="transition-delay: 0.1s">
+          <div class="bothway-slide-list">
+            <img src="./uk-images/b6.png" alt="" class="img to-top" style="transition-delay: 0.1s">
+            <img src="./uk-images/b7.png" alt="" class="img to-top" style="transition-delay: 0.2s">
+            <img src="./uk-images/b8.png" alt="" class="img to-top" style="transition-delay: 0.3s">
+            <img src="./uk-images/b9.png" alt="" class="img to-top" style="transition-delay: 0.4s">
+            <img src="./uk-images/b10.png" alt="" class="img to-top" style="transition-delay: 0.5s">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  // function initBothway(){
+  //   console.log(window.scrollY);
+  // }
+  // initBothway()
+  // window.addEventListener('scroll',function(){
+  //   initBothway()
+  // })
+  window.addEventListener('load',function(){
+    function scrollSlide(){
+      let $p= $('.bothway-slide')
+      let $box = $p.find('.bothway-slide-img')
+      let $cont = $p.find('.bothway-slide-box')
+      let pWidth = $box[0].offsetWidth // 父级宽度
+      let cWidth = ($p[0].offsetWidth - $cont[0].offsetWidth) /2 //内容区域外平分宽度
+
+      function changeLeft(){
+        let wHeight = window.innerHeight
+        $cont.each(function(){
+          let react = $(this).find('.bothway-slide-list')[0].getBoundingClientRect()
+          let top = react.top
+          let length = $(this).find('.bothway-slide-list').find('.img').length
+          let width = $(this).find('.bothway-slide-list').find('.img')[0].offsetWidth*1 + 26 //单个图片宽度
+          let height = $(this).find('.bothway-slide-list').find('.img')[0].offsetHeight
+         
+          let percentum = 1
+          if(top<(wHeight - height) && top>180){
+            percentum =1- ((top - 180) / (wHeight - 180 - height))
+            let left = (width * length - pWidth - cWidth)
+            $(this).find('.bothway-slide-list').css({'transform': 'translateX(-'+left*percentum +'px)'})
+            $(this).find('.bothway-slide-txt').css({'transform': 'translateX(-'+left*percentum +'px)'})
+          }
+
+          if(top<180){
+            let left = (width * length - pWidth - cWidth)
+            $(this).find('.bothway-slide-txt').css({'transform': 'translateX(-'+left +'px)','transition': 'transform 0.1s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+            $(this).find('.bothway-slide-list').css({'transform': 'translateX(-'+left +'px)','transition': 'transform 0.1s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+          }
+          if(top>(wHeight - height)){
+            $(this).find('.bothway-slide-txt').css({'transform': 'translateX(0px)','transition': 'transform 0.1s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+            $(this).find('.bothway-slide-list').css({'transform': 'translateX(0px)','transition': 'transform 0.1s cubic-bezier(0.4, 0.2, 0.2, 1)'})
+          }
+          
+        })
+      }
+      changeLeft()
+      window.addEventListener('scroll',changeLeft)
+    }
+    scrollSlide()
+  })
+</script>
+<div class="hover-slide">
+  <div class="container">
+    <div class="hover-slide-cont">
+      <div class="hover-slide-text to-top">
+        <div class="hover-slide-text-item to-top active" style="transition-delay: 0.1s">
+          <div>
+            <div class="hover-slide-text-rp undisable-box">ser-like Results, From Home</div>
+            <div class="hover-slide-text-sub disable-box">01 - ser-like Results, From Home</div>
+            <div class="hover-slide-text-title">Cheaper than razors, effective like laser.</div>
+            <div class="hover-slide-text-p disable-box">Finally. Hair removal that lasts — old ways of removing hair just can't compete. IPL provides a long-term hair removal solution, so you have more time for what matters most to you.</div>
+          </div>
+        </div>
+        <div class="hover-slide-text-item to-top" style="transition-delay: 0.2s">
+          <div>
+            <div class="hover-slide-text-rp undisable-box">ser-like Results, From Home</div>
+            <div class="hover-slide-text-sub disable-box">01 - ser-like Results, From Home</div>
+            <div class="hover-slide-text-title">12 Minute full-body sessions.</div>
+            <div class="hover-slide-text-p disable-box">ntroducing, for the first time ever — Thumbs-Free AutoGlide Mode! Experience even faster full-body sessions, with a flash to the skin every 0.7 seconds.</div>
+          </div>
+        </div>
+        <div class="hover-slide-text-item to-top" style="transition-delay: 0.3s">
+          <div>
+            <div class="hover-slide-text-rp undisable-box">Sapphire Ice-Cooling™</div>
+            <div class="hover-slide-text-sub disable-box">01 - ser-like Results, From Home</div>
+            <div class="hover-slide-text-title">Unrivaled skin protection.</div>
+            <div class="hover-slide-text-p disable-box">Expert-backed, clinically tested, built-in UV filter and Ice-Cooling Technology™ for safe and painless hair removal.</div>
+            <div class="disable-box">
+              <img src="./uk-images/c4.png" alt="" class="img pc-box">
+              <img src="./uk-images/c5.svg" alt="" class="img mb-box">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hover-slide-img to-top" style="transition-delay: 0.4s">
+        <div class="hover-slide-img-item active">
+          <img src="./uk-images/c1.png" alt="" class="img pc-box">
+          <img src="./uk-images/c6.png" alt="" class="img mb-box">
+        </div>
+        <div class="hover-slide-img-item">
+          <!-- <img src="./uk-images/c2.png" alt="" class="img pc-box">
+          <img src="./uk-images/c7.png" alt="" class="img mb-box"> -->
+          <video autoplay muted loop>
+            <source src="https://cdn.shopify.com/videos/c/vp/350ab4f325cf4d0a80accdda049ab73b/350ab4f325cf4d0a80accdda049ab73b.HD-1080p-3.3Mbps-15620639.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+        <div class="hover-slide-img-item">
+          <!-- <img src="./uk-images/c3.png" alt="" class="img pc-box"> -->
+          <img src="./uk-images/c8.png" alt="" class="img mb-box">
+          <video autoplay muted loop class="pc-box">
+            <source src="https://cdn.shopify.com/videos/c/vp/350ab4f325cf4d0a80accdda049ab73b/350ab4f325cf4d0a80accdda049ab73b.HD-1080p-3.3Mbps-15620639.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load',function(){
+    if(window.innerWidth>991){
+      $('.hover-slide .hover-slide-text-item').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+        $(this).parents('.hover-slide-text').siblings('.hover-slide-img').find('.hover-slide-img-item').removeClass('active').eq($(this).index()).addClass('active')
+        $(this).parents('.hover-slide-text').siblings('.hover-slide-img').find('.hover-slide-img-item video').removeAttr('muted')
+        if($(this).parents('.hover-slide-text').siblings('.hover-slide-img').find('.hover-slide-img-item').eq($(this).index()).find('video').length){
+          $(this).parents('.hover-slide-text').siblings('.hover-slide-img').find('.hover-slide-img-item').eq($(this).index()).find('video').attr('muted','')
+        }
+      })
+    }else{
+      function hoverSlide(){
+        let time = +new Date()
+        let $p = $('.hover-slide')
+        let $list = $p.find('.hover-slide-cont')
+        const content = document.querySelector('.hover-slide .hover-slide-cont');
+        let length = $list.find('.hover-slide-img-item').length
+        let width = $list.find('.hover-slide-img-item')[0].offsetWidth
+        let index = 0
+        let pWidth = $p[0].offsetWidth
+        let marginW = 24
+        let lWidth = length * (width + marginW) + $list[0].offsetLeft
+        let translateX = 0
+
+        function changeTransform(num){
+          translateX += (width + marginW) * num
+          if(translateX > lWidth - pWidth) {
+            translateX = lWidth - pWidth
+          }
+          if(translateX<0) translateX = 0
+          $list.css({
+            transform: 'translateX(-' + translateX + 'px)',
+            transition: 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s'
+          })
+        }
+
+        detectSwipe(content, () => {
+          changeTransform(1)
+        }, () => {
+          changeTransform(-1)
+        });
+      }
+      
+      function detectSwipe(element, onSwipeLeft, onSwipeRight) {
+        let startX = 0;
+
+        const getEventX = (event) => {
+          return event.touches ? event.touches[0].clientX : event.clientX;
+        };
+
+        const handleTouchStart = (e) => {
+          startX = getEventX(e);
+        };
+
+        const handleTouchMove = (e) => {
+          const deltaX = getEventX(e) - startX;
+          if (Math.abs(deltaX) > 10 && e.cancelable) {
+            e.preventDefault();
+          }
+        };
+
+        const handleTouchEnd = (e) => {
+          const deltaX = getEventX(e.changedTouches ? e.changedTouches[0] : e) - startX;
+          if (deltaX > 10) {
+            onSwipeRight();
+          } else if (deltaX < -10) {
+            onSwipeLeft();
+          }
+        };
+
+        element.addEventListener('touchstart', handleTouchStart);
+        element.addEventListener('touchmove', handleTouchMove);
+        element.addEventListener('touchend', handleTouchEnd);
+
+        // Add mouse event listeners for PC compatibility
+        element.addEventListener('mousedown', handleTouchStart);
+        element.addEventListener('mousemove', handleTouchMove);
+        element.addEventListener('mouseup', handleTouchEnd);
+      }
+      hoverSlide()
+      
+    }
+  })
+</script>
+<div class="return-flow">
+  <div class="container">
+    <div class="return-flow-sub to-top">ulike guide </div>
+    <div class="return-flow-top">
+      <div class="title-diy to-top" style="transition-delay: 0.1s">4 easy steps to renew your beauty routine.</div>
+      <div class="return-flow-arrow to-top" style="transition-delay: 0.2s">
+        <div class="return-flow-arrow-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+            <path d="M18.3333 8.35196L5.97632 20.709L18.3333 33.066L20.6904 30.709L12.357 22.3757H33.3333V19.0423H12.357L20.6904 10.709L18.3333 8.35196Z" fill="black"/>
+          </svg>
+        </div>
+        <div class="return-flow-arrow-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41" fill="none">
+            <path d="M22.1666 8.35196L34.5236 20.709L22.1666 33.066L19.8096 30.709L28.1429 22.3757H7.16663V19.0423H28.1429L19.8096 10.709L22.1666 8.35196Z" fill="black"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <div class="return-flow-cont">
+      <div class="return-flow-list">
+        <div class="return-flow-item to-top" style="transition-delay: 0.1s">
+          <img src="./uk-images/d1.png" alt="" class="img">
+          <div class="return-flow-text">
+            <div class="return-flow-num">STEP 1 </div>
+            <div class="return-flow-t">Clean the treatment area.</div>
+            <div class="return-flow-txt">
+              Clean The Treatment AreaClean The Treatment Area
+            </div>
+          </div>
+        </div>
+        <div class="return-flow-item to-top" style="transition-delay: 0.2s">
+          <img src="./uk-images/d2.png" alt="" class="img">
+          <div class="return-flow-text">
+            <div class="return-flow-num">STEP 2 </div>
+            <div class="return-flow-t">Use the razor in box to shave off the hair.</div>
+            <div class="return-flow-txt">
+              To prepare your skin for use, wash and dry the skin, then shave the affected area.
+            </div>
+          </div>
+        </div>
+        <div class="return-flow-item to-top" style="transition-delay: 0.3s">
+          <img src="./uk-images/d3.png" alt="" class="img">
+          <div class="return-flow-text">
+            <div class="return-flow-num">STEP 3</div>
+            <div class="return-flow-t">Google up to protect your eyes</div>
+            <div class="return-flow-txt">
+              Protect your eyes with protective glasses.
+            </div>
+          </div>
+        </div>
+        <div class="return-flow-item to-top" style="transition-delay: 0.4s">
+          <img src="./uk-images/d4.png" alt="" class="img">
+          <div class="return-flow-text">
+            <div class="return-flow-num">STEP 4</div>
+            <div class="return-flow-t">Power on your Ulike, apply handle on skin and press button.</div>
+            <div class="return-flow-txt">
+              Place the light outlet on the skin and apply
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load',function(){
+    function returnFlowSwiper(){
+      let time = +new Date()
+      let $p = $('.return-flow')
+      let $list = $p.find('.return-flow-list')
+      let $arrowItem = $p.find('.return-flow-arrow-item')
+      const content = document.querySelector('.return-flow .return-flow-list');
+      let length = $list.find('.return-flow-item').length
+      let width = $list.find('.return-flow-item')[0].offsetWidth
+      let index = 0
+      let pWidth = $p[0].offsetWidth
+      let marginW = window.innerWidth > 768 ? 40:20
+      let lWidth = length * (width + marginW) + $list[0].offsetLeft
+      let translateX = 0
+
+      function changeTransform(num){
+        translateX += (width + marginW) * num
+        if(translateX > lWidth - pWidth) {
+          translateX = lWidth - pWidth
+        }
+        if(translateX<0) translateX = 0
+        $list.css({
+          transform: 'translateX(-' + translateX + 'px)',
+          transition: 'all 1s cubic-bezier(0.645, 0.045, 0.355, 1) 0s'
+        })
+      }
+
+      $arrowItem.click(function(){
+        let sindex = $(this).index()
+        if(+new Date() - time<1000) return
+        time = +new Date()
+        changeTransform(sindex?1:-1)
+      })
+
+      detectSwipe(content, () => {
+        changeTransform(1)
+      }, () => {
+        changeTransform(-1)
+      });
+    }
+
+    function detectSwipe(element, onSwipeLeft, onSwipeRight) {
+      let startX = 0;
+
+      const getEventX = (event) => {
+        return event.touches ? event.touches[0].clientX : event.clientX;
+      };
+
+      const handleTouchStart = (e) => {
+        startX = getEventX(e);
+      };
+
+      const handleTouchMove = (e) => {
+        const deltaX = getEventX(e) - startX;
+        if (Math.abs(deltaX) > 10 && e.cancelable) {
+          e.preventDefault();
+        }
+      };
+
+      const handleTouchEnd = (e) => {
+        const deltaX = getEventX(e.changedTouches ? e.changedTouches[0] : e) - startX;
+        if (deltaX > 10) {
+          onSwipeRight();
+        } else if (deltaX < -10) {
+          onSwipeLeft();
+        }
+      };
+
+      element.addEventListener('touchstart', handleTouchStart);
+      element.addEventListener('touchmove', handleTouchMove);
+      element.addEventListener('touchend', handleTouchEnd);
+
+      // Add mouse event listeners for PC compatibility
+      element.addEventListener('mousedown', handleTouchStart);
+      element.addEventListener('mousemove', handleTouchMove);
+      element.addEventListener('mouseup', handleTouchEnd);
+    }
+
+
+
+    returnFlowSwiper()
+  })
+  
+</script>
+</body>
+<script src="./js/script.js"></script>
+</html>

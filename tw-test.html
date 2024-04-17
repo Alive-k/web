@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      max-width: 1600px;
+      padding: 0 40px;
+      margin: 0 auto;
+    }
+
+    @media (max-width:991px) {
+      .container{
+        padding: 0 24px;
+      }
+    }
+    .top-bar{
+      padding: 60px 0 80px 0;
+      background: url(./images18/bg.jpg) no-repeat center;
+      background-size: cover;
+      display: block;
+      text-decoration: none;
+    }
+    .top-bar .top-bar-sub{
+      color: #FFF;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1;
+      text-align: center;
+    }
+    .top-bar .top-bar-flex{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 30px;
+    }
+    .top-bar .top-bar-title{
+      color: #FFF;
+      font-size: 75px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 3.75px;
+    }
+    .top-bar .top-bar-btn{
+      color: #E0004D;
+      font-size: 60px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 3px;
+      width: 500px;
+      height: 80px;
+      border-radius: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFF;
+    }
+
+    @media (max-width:1400px) {
+      .top-bar .top-bar-sub{
+        font-size: 25px;
+      }
+      .top-bar .top-bar-title{
+        font-size: 55px;
+      }
+      .top-bar .top-bar-btn{
+        font-size: 40px;
+        width: 350px;
+        height: 65px;
+      }
+    }
+
+    @media (max-width:991px) {
+      .top-bar{
+        padding: 50px 0;
+      }
+      .top-bar .top-bar-sub{
+        font-size: 14px;
+      }
+      .top-bar .top-bar-title{
+        font-size: 36px;
+      }
+      .top-bar .top-bar-flex{
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      .top-bar .top-bar-btn{
+        font-size: 18px;
+        width: 185px;
+        height: 40px;
+      }
+    }
+
+    .request-module{
+      padding: 102px 0;
+    }
+    .request-module .request-module-cont{
+      max-width: 1380px;
+      margin: 0 auto;
+      border: 2px solid #E0004D;
+      border-radius: 18px;
+      border-top-width: 17px;
+      padding: 95px 116px;
+      color: #E0004D;
+    }
+    .request-module .request-module-title{
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 3.5px;
+    }
+    .request-module .request-module-sub{
+      font-size: 22px;
+      line-height: 2;
+      letter-spacing: 0.44px;
+      margin-top: 30px;
+    }
+    .request-module .request-module-sub p{
+      margin: 0;
+    }
+    .request-module .request-module-line{
+      height: 1px;
+      width: 100%;
+      background: #E0004D;
+      margin: 50px 0;
+    }
+
+    @media (max-width:991px) {
+      .request-module{
+        padding: 50px 0;
+      }
+      .request-module .request-module-cont{
+        padding: 55px 30px;
+        border-top-width: 5px;
+        border-radius: 5px;
+      }
+      .request-module .request-module-title{
+        font-size: 20px;
+      }
+      .request-module .request-module-sub{
+        font-size: 12px;
+        margin-top: 10px;
+      }
+      .request-module .request-module-line{
+        margin: 40px 0;
+      }
+    }
+    .event-notes{
+      padding: 85px 0;
+      background: #F0F0F0;
+    }
+    .event-notes .event-notes-cont{
+      max-width: 1100px;
+      margin: 0 auto;
+      color: #000;
+      font-size: 22px;
+      line-height: 1.6;
+      letter-spacing: 1.1px;
+    }
+    .event-notes .event-notes-cont p{
+      margin: 0;
+    }
+    @media (max-width:991px) {
+      .event-notes .event-notes{
+        padding: 50px 0;
+      }
+      .event-notes .event-notes-cont{
+        font-size: 12px;
+        line-height: 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="top-bar">
+    <div class="container">
+      <div class="top-bar-sub">體驗員名單公佈：4.13</div>
+      <div class="top-bar-flex">
+        <div class="top-bar-title">Ulike體驗員招募</div>
+        <div class="top-bar-btn">0元使用新品</div>
+      </div>
+    </div>
+  </a>
+  <div class="request-module">
+    <div class="container">
+      <div class="request-module-cont">
+        <div class="request-module-title">
+          體驗員要求
+        </div>
+        <div class="request-module-sub">
+          <p>1. 每週使用3次，依據皮膚狀態 每兩天使用一次的頻率，10-40分鐘， 同時發使用圖片或者視頻給客服；</p>
+          <p>2.堅持使用1個月，期間至少需要發2次使用情況，個人社交軟體，分享使用感受并@ulike；</p>
+          <p>3.為保證視頻或者圖片質量， 您提供的視頻或者圖片需要保證畫面清晰美觀，視頻不低於30S 或者圖片不低於4張，必須包含使用前後對比。</p>
+          <p>4.您發佈作品前， 請講內容交給客服審核。</p>
+        </div>
+        <div class="request-module-line"></div>
+        <div class="request-module-title">
+          如何領取白皇后
+        </div>
+        <div class="request-module-sub">
+          <p>在官網下單後， 提供訂單給客服，不能使用貨到付款 ，不然後續退款流程長；</p>
+          <p>30天完成使用打卡後，全款原路退回 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="event-notes">
+    <div class="container">
+      <div class="event-notes-cont">
+        <p>活動須知：</p>
+        <p>1.被選中的體驗官， 需在3個工作日內回復私信，逾期視為主動放棄；</p>
+        <p>2.測評視頻或者圖片版權，Ulike擁有商用權；</p>
+        <p>3.緊緻轉載，盜用他人視頻， 如遇版權糾紛引發的責任均有測評者負責；</p>
+        <p>4.需在收到機器後3個工作日內開始使用， 且在1個月內發佈2次使用感受，否則Ulike 有權收取產品費用；</p>
+        <p>5.發佈後的作品， 不得刪除；</p>
+        <p>6.本次活動最終解釋權歸Ulike公司所有。</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

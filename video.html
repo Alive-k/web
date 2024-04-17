@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title></title>
+
+</head>
+
+<body style="height:2000px">
+
+  <video id="video" controls loop width='300' autoplay webkit-playsinline="true"
+    src='http://www.w3school.com.cn/example/html5/mov_bbb.mp4'></video>
+
+  <p>
+
+      <button type="button" id='btn-play'>开始</button>
+
+      <button type="button" id='btn-pause'>暂停</button>
+
+  </p>
+
+</body>
+
+<script type="text/javascript">
+
+  /*
+  
+  * video视频转成canvas（兼容至IE8+）
+  
+  * Author: shaojiancong@baidu.com
+  
+  *
+  
+  *  使用方法：
+  
+  *      var videoCanvas = new VideoToCanvas(videoDom);
+  
+  *
+  
+  *  对象的属性：
+  
+  *      暂无。
+  
+  *
+  
+  *  对象的方法：
+  
+  *      play      播放视频
+  
+  *      pause      暂停视频
+  
+  *      playPause  播放或暂停视频
+  
+  *      change(src) 切换视频。参数src为切换的视频地址
+  
+  */
+
+  var VideoToCanvas = (function (window, document) {
+
+    function VideoToCanvas(videoElement) {
+
+      if (!videoElement) { return; }
+
+      var canvas = document.createElement('canvas');
+
+      canvas.width = videoElement.offsetWidth;
+
+      canvas.height = videoElement.offsetHeight;
+
+      ctx = canvas.getContext('2d');
+
+      var newVideo = videoElement.cloneNode(false);
+
+      var timer = null;
+
+      var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+      var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+      function drawCanvas() {
+
+        ctx.drawImage(newVideo, 0, 0, canvas.width, canvas.height);
+
+        timer = requestAnimationFrame(drawCanvas);
+
+      }
+
+      function stopDrawing() {
+
+        cancelAnimationFrame(timer);
+
+      }
+
+      newVideo.addEventListener('play', function () {
+
+        drawCanvas();
+
+      }, false);
+
+      newVideo.addEventListener('pause', stopDrawing, false);
+
+      newVideo.addEventListener('ended', stopDrawing, false);
+
+      videoElement.parentNode.replaceChild(canvas, video);
+
+      this.play = function () {
+
+        newVideo.play();
+
+      };
+
+      this.pause = function () {
+
+        newVideo.pause();
+
+      };
+
+      this.playPause = function () {
+
+        if (newVideo.paused) {
+
+          this.play();
+
+        } else {
+
+          this.pause();
+
+        }
+
+      };
+
+      this.change = function (src) {
+
+        if (!src) { return; }
+
+        newVideo.src = src;
+
+      };
+
+      this.drawFrame = drawCanvas;
+
+    }
+
+    return VideoToCanvas;
+
+  })(window, document);
+
+</script>
+
+<script>
+
+  var video = document.getElementById('video');
+
+  var canvasVideo = new VideoToCanvas(video);
+
+  //模拟click事件
+
+  //获取btn
+
+  var btn = document.querySelector("#btn-play");
+
+  //创建event
+
+  var event = document.createEvent("MouseEvents");
+
+  // //初始化event
+
+  event.initMouseEvent("click", true, true, document.defaultView, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+  //click事件绑定事件处理程序
+
+  btn.onclick = function () {
+
+    canvasVideo.play();
+
+  }
+
+  //触发事件,一定要延迟触发，等到视频加载完成之后。
+
+  setTimeout(function () {
+
+    btn.dispatchEvent(event);
+
+  }, 2000)
+
+  //取消引用
+
+  btn.onclick = null;
+
+  document.querySelector('body').addEventListener('touchend', function () {
+
+    canvasVideo.play();
+
+  })
+
+  document.getElementById('btn-play').addEventListener('click', function () {
+
+    canvasVideo.play();
+
+  }, false);
+
+  document.getElementById('btn-pause').addEventListener('click', function () {
+
+    canvasVideo.pause();
+
+  }, false)
+
+</script>
+
+</html>
