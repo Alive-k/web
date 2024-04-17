@@ -1,0 +1,28 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="316.45mm" height="316.45mm" viewBox="0 0 897.02 897.02">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 30px;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0 0)">
+      <rect class="cls-1" width="897.02" height="897.02"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <path d="M264.19,433.15H202.75l-1.48.07a15.36,15.36,0,0,0,1.48,30.65h61.44l1.47-.07a15.36,15.36,0,0,0-1.47-30.65" transform="translate(0 0)"/>
+    <path d="M694.27,433.15H448.51l-1.48.07a15.36,15.36,0,0,0,1.48,30.65H694.27l1.47-.07a15.36,15.36,0,0,0-1.47-30.65" transform="translate(0 0)"/>
+    <path d="M356.35,382A66.56,66.56,0,1,0,414,415.23,66.56,66.56,0,0,0,356.35,382m0,102.4a35.84,35.84,0,1,1,35.84-35.84,35.84,35.84,0,0,1-35.84,35.84" transform="translate(0 0)"/>
+    <circle class="cls-3" cx="448.51" cy="448.51" r="433.51"/>
+  </g>
+</svg>

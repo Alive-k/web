@@ -1,0 +1,25 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.82mm" height="14.82mm" viewBox="0 0 42 42">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="42" height="42"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <circle class="cls-3" cx="21" cy="21" r="20"/>
+    <polyline class="cls-3" points="21.01 9 21.01 21.01 29.49 29.49"/>
+  </g>
+</svg>

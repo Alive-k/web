@@ -1,0 +1,43 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="316.45mm" height="316.45mm" viewBox="0 0 897.02 897.02">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-4 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 30px;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0 0)">
+      <rect class="cls-1" x="193.24" y="243.07" width="522.96" height="410.88"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(0 0)">
+      <rect class="cls-1" width="897.02" height="897.02"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <path d="M270,294.59a15.36,15.36,0,0,1,1.47,30.65l-1.47.07H208.59a15.36,15.36,0,0,1-1.47-30.65l1.47-.07Zm430.08,0a15.36,15.36,0,0,1,1.48,30.65l-1.48.07H454.35a15.36,15.36,0,0,1-1.48-30.65l1.48-.07Z" transform="translate(0 0)"/>
+  </g>
+  <g class="cls-3">
+    <path d="M362.19,243.39A66.56,66.56,0,1,1,295.63,310a66.56,66.56,0,0,1,66.56-66.56m0,30.72A35.84,35.84,0,1,0,398,310a35.84,35.84,0,0,0-35.84-35.84" transform="translate(0 0)"/>
+    <path d="M638.67,576.19a15.36,15.36,0,0,0-1.48,30.65l1.48.07h61.44a15.36,15.36,0,0,0,1.48-30.65l-1.48-.07Z" transform="translate(0 0)"/>
+  </g>
+  <g class="cls-2">
+    <path d="M546.51,519.87A66.56,66.56,0,1,1,480,586.43a66.56,66.56,0,0,1,66.56-66.56m0,30.72a35.84,35.84,0,1,0,35.84,35.84,35.84,35.84,0,0,0-35.84-35.84" transform="translate(0 0)"/>
+    <path d="M208.59,576.19a15.36,15.36,0,0,0-1.47,30.65l1.47.07H454.35a15.36,15.36,0,0,0,1.47-30.65l-1.47-.07Z" transform="translate(0 0)"/>
+  </g>
+  <g class="cls-3">
+    <circle class="cls-4" cx="448.51" cy="448.51" r="433.51"/>
+  </g>
+</svg>

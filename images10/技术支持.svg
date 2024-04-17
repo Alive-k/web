@@ -1,0 +1,13 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0078 42.5547C11.8511 50.4719 20.5595 58.0623 28.4439 57.7825" stroke="#DEB581" stroke-width="2.5"/>
+<path d="M60.3357 26.0586C57.3127 14.6356 47.4859 6.26562 35.83 6.26562C24.174 6.26562 14.3472 14.6356 11.3242 26.0586" stroke="#DEB581" stroke-width="2.5"/>
+<mask id="path-3-inside-1_5380_2345" fill="white">
+<rect x="51.4375" y="24.4121" width="14.7857" height="19.793" rx="1.97143"/>
+</mask>
+<rect x="51.4375" y="24.4121" width="14.7857" height="19.793" rx="1.97143" stroke="#DEB581" stroke-width="5" mask="url(#path-3-inside-1_5380_2345)"/>
+<mask id="path-4-inside-2_5380_2345" fill="white">
+<rect x="5.42969" y="24.4121" width="14.7857" height="19.793" rx="1.97143"/>
+</mask>
+<rect x="5.42969" y="24.4121" width="14.7857" height="19.793" rx="1.97143" stroke="#DEB581" stroke-width="5" mask="url(#path-4-inside-2_5380_2345)"/>
+<path d="M35.3923 57.7275C35.3923 59.7747 33.7407 61.4258 31.7137 61.4258C29.6868 61.4258 28.0352 59.7747 28.0352 57.7275C28.0352 55.6804 29.6868 54.0293 31.7137 54.0293C33.7407 54.0293 35.3923 55.6804 35.3923 57.7275Z" stroke="#DEB581" stroke-width="2.5"/>
+</svg>
