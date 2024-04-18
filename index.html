@@ -9,6 +9,7 @@
     </title>
     <link rel="shortcut icon" href="./images/1_1a578f68-392b-4498-a56e-f707062780ae_96x96.svg" type="image/png">
     <style>
+
       :root {
         --heading-color: 40, 40, 40;
         --text-color: 106, 106, 106;
@@ -185,14 +186,14 @@
           --vertical-breather-tight: 48px;
         }
       }
-
       .header--transparent {
         background: transparent !important;
       }
     </style>
 
     <link rel="stylesheet" href="./css/theme.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/comm.css" />
+    <link rel="stylesheet" href="./css/a.css" />
     <script src="./js/jquery.min.js"></script>
     <script>
       // This allows to expose several variables to the global scope, to be used in scripts
@@ -355,6 +356,7 @@
 					--primary-button-text-color: 5, 30, 56;
 					--section-background: 0, 0, 0;
 					position: relative;
+                    z-index: 3;
 				}
 
 				@media screen and (min-width: 741px) {
@@ -364,7 +366,7 @@
 
 					#shopify-section-sections--16782741864689__announcement-bar {
 						position: relative;
-						z-index: unset;
+						/* z-index: unset; */
 					}
 				}
 			</style>
@@ -411,580 +413,238 @@
 			</script>
 		</div>
     <div id="shopify-section-sections--16782741864689__header"
-			class="shopify-section shopify-section-group-header-group shopify-section--header"
-			data-shopify-editor-section="{&quot;id&quot;:&quot;sections--16782741864689__header&quot;,&quot;type&quot;:&quot;header&quot;,&quot;disabled&quot;:false}">
-			<style>
-				:root {
-					--enable-sticky-header: 1;
-					--enable-transparent-header: 1;
-					--loading-bar-background: 40, 40, 40;
-					/* Prevent the loading bar to be invisible */
-				}
+        class="shopify-section shopify-section-group-header-group shopify-section--header"
+        data-shopify-editor-section="{&quot;id&quot;:&quot;sections--16782741864689__header&quot;,&quot;type&quot;:&quot;header&quot;,&quot;disabled&quot;:false}">
+        <style>
+            :root {
+                --enable-sticky-header: 1;
+                --enable-transparent-header: 1;
+                --loading-bar-background: 40, 40, 40;
+                /* Prevent the loading bar to be invisible */
+            }
 
-				#shopify-section-sections--16782741864689__header {
-					--header-background: 255, 255, 255;
-					--header-text-color: 40, 40, 40;
-					--header-border-color: 223, 223, 223;
-					--reduce-header-padding: 0;
-					position: -webkit-sticky;
-					position: sticky;
-					top: 0;
-					z-index: 4;
-				}
+            #shopify-section-sections--16782741864689__header {
+                --header-background: 255, 255, 255;
+                --header-text-color: 40, 40, 40;
+                --header-border-color: 223, 223, 223;
+                --reduce-header-padding: 0;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                z-index: 4;
+            }
 
-				.shopify-section--announcement-bar~#shopify-section-sections--16782741864689__header {
-					/* top: calc(var(--enable-sticky-announcement-bar, 0) * var(--announcement-bar-height, 0px)); */
-          top: -1px;
-				}
+            .shopify-section--announcement-bar~#shopify-section-sections--16782741864689__header {
+                /* top: calc(var(--enable-sticky-announcement-bar, 0) * var(--announcement-bar-height, 0px)); */
+                top: -1px;
+            }
 
-				#shopify-section-sections--16782741864689__header {
-					margin-bottom: calc(-1 * (var(--header-height, 0px) + var(--enable-sticky-announcement-bar, 0) * var(--announcement-bar-height, 0px)));
-				}
+            #shopify-section-sections--16782741864689__header {
+                margin-bottom: calc(-1 * (var(--header-height, 0px) + var(--enable-sticky-announcement-bar, 0) * var(--announcement-bar-height, 0px)));
+            }
 
-				.js #shopify-section-sections--16782741864689__header .header--transparent {
-					--header-background: transparent;
-					--header-text-color: 255, 255, 255;
-					--header-border-color: 255, 255, 255, 0.15;
-					--header-transparent-bubble-text-color: 40, 40, 40;
-				}
+            .js #shopify-section-sections--16782741864689__header .header--transparent {
+                --header-background: transparent;
+                --header-text-color: 255, 255, 255;
+                --header-border-color: 255, 255, 255, 0.15;
+                --header-transparent-bubble-text-color: 40, 40, 40;
+            }
 
-				#shopify-section-sections--16782741864689__header .header__logo-image {
-					max-width: 90px;
-				}
+            #shopify-section-sections--16782741864689__header .header__logo-image {
+                max-width: 90px;
+            }
 
-				@media screen and (min-width: 741px) {
-					#shopify-section-sections--16782741864689__header .header__logo-image {
-						max-width: 115px;
-					}
-				}
-
-				@media screen and (min-width: 1200px) {
-
-					/* For this navigation we have to move the logo and make sure the navigation takes the whole width */
-					.header__logo {
-						order: -1;
-						flex: 1 1 0;
-					}
-
-					.header__inline-navigation {
-						flex: 1 1 auto;
-						justify-content: center;
-						max-width: max-content;
-						margin-inline: 48px;
-					}
-				}
-			</style>
-
-			<store-header sticky="" transparent="" class="header header--bordered header--transparent" role="banner">
-				<div class="container">
-					<div class="header__wrapper">
-            <style>
-              .menu-diy .mega-menu__heading{
-                font-size: 16px;
-                color: #000;
-                margin-bottom: 0;
-              }
-              .menu-diy .mega-menu__text{
-                font-size: 14px;
-                color: #818181;
-                line-height: 1.2;
-              }
-              .menu-diy .more-btn{
-                font-size: 14px;
-                color: #000;
-                text-decoration: underline;
-                cursor: pointer;
-                transition: all .4s ease;
-              }
-              .menu-diy .more-btn:hover{
-                opacity: .6;
-              }
-              .menu-diy .mega-menu__image-wrapper{
-                position: relative;
-              }
-              .menu-diy .menu-tag{
-                position: absolute;
-                background: #d22f4c;
-                font-size: 16px;
-                font-weight: bold;
-                color: #fff;
-                top: 10px;
-                left: 10px;
-                z-index: 3;
-                padding: 3px 10px;
-                overflow: hidden;
-              }
-
-              .menu-diy .menu-tag::before {
-                position: absolute;
-                content: "";
-                display: block;
-                width: 200%;
-                height: 200%;
-                z-index: 2;
-                background: linear-gradient(
-                  -45deg,
-                  rgba(255, 255, 255, 0) 40%,
-                  rgba(255, 255, 255, 0.5) 50%,
-                  rgba(255, 255, 255, 0) 60%
-                );
-                animation: menuScanning 3s linear infinite;
-              }
-              @keyframes menuScanning {
-                0% {
-                  transform: translate(-100%, -100%);
+            @media screen and (min-width: 741px) {
+                #shopify-section-sections--16782741864689__header .header__logo-image {
+                    max-width: 115px;
                 }
-                100% {
-                  transform: translate(100%, 100%);
+            }
+
+            @media screen and (min-width: 1200px) {
+
+                /* For this navigation we have to move the logo and make sure the navigation takes the whole width */
+                .header__logo {
+                    order: -1;
+                    flex: 1 1 0;
                 }
-              }
-              .menu-diy .mega-menu__title{
-                font-size: 16px;
-                font-weight: bold;
-                position: relative;
-                margin-bottom: 20px;
-              }
-              .menu-diy .mega-menu__title::before{
-                position: absolute;
-                content: '';
-                display: block;
-                width: 10px;
-                height: 2px;
-                background: #dcdcdc;
-                bottom: -10px;
-              }
-              .menu-diy .linklist__item{
-                font-size: 16px;
-                color: #919191;
-                line-height: 1.4;
-                transition: all .4s ease;
-              }
-              .menu-diy .linklist__item:hover{
-                color: #000;
-              }
-              .menu-diy .link--faded:hover{
-                opacity: 1;
-              }
-              .menu-diy .mega-menu__column:nth-child(2){
-                margin-left: 0;
-                padding-left: 40px;
-                border-left: 1px solid #f0f0f0;
-              }
-              @media screen and (min-width: 1400px){
-                .mega-menu__image-push {
-                    width: 340px;
+
+                .header__inline-navigation {
+                    flex: 1 1 auto;
+                    justify-content: center;
+                    max-width: max-content;
+                    margin-inline: 48px;
                 }
-                .menu-diy .mega-menu__image{
-                  width: 100%;
-                }
-              }
-            </style>
-						<!-- LEFT PART -->
-						<nav class="header__inline-navigation" role="navigation"><desktop-navigation>
-								<ul class="header__linklist list--unstyled hidden-pocket hidden-lap" role="list">
-									<li class="header__linklist-item has-dropdown" data-item-title="Shop Our Products">
-										<a class="header__linklist-link link--animated" href="./details.html"
-											aria-controls="desktop-menu-1" aria-expanded="false">Shop Our Products</a>
-										<div hidden="" id="desktop-menu-1" class="mega-menu"
-											data-shopify-editor-block="{&quot;id&quot;:&quot;13b82bef-2020-40a6-a281-1549070d6f10&quot;,&quot;type&quot;:&quot;mega_menu&quot;}">
-											<div class="container">
-												<div class="mega-menu__inner menu-diy">
-													<div class="mega-menu__images-wrapper ">
-														<a href="./details.html" class="mega-menu__image-push image-zoom">
-															<div class="mega-menu__image-wrapper">
-                                <img
-																	src="./images/nav1.png"
-																	alt=""
-																	srcset="./images/nav1.png"
-																	loading="lazy"
-																	class="mega-menu__image">
-                                  <div class="menu-tag">60%OFF</div>
-															</div>
-															<p class="mega-menu__heading heading heading--small">Ulike
-																Sapphire Air3</p>
-                                <span class="mega-menu__text">
-                                  Faster,Cooler, Lighter, Stronger
-                              </span>
-                              <div class="more-btn">Learn More ></div>
-														</a>
-														<a href="./details.html" class="mega-menu__image-push image-zoom">
-															<div class="mega-menu__image-wrapper"><img
-																	src="./images/nav2.png"
-																	alt=""
-																	srcset="./images/nav2.png"
-																	loading="lazy"
-																	class="mega-menu__image">
-															</div>
-															<p class="mega-menu__heading heading heading--small">Ulike
-																Sapphire Air+</p><span
-																class="mega-menu__text">Sapphire-Patented Classic: First
-																Gen</span>
-                                <div class="more-btn">Learn More ></div>
-														</a>
-													</div>
-													<div class="mega-menu__columns-wrapper">
-														<div class="mega-menu__column">
-                              <a href="#" class="mega-menu__title heading heading--small">
-                                Product Knowledge
-                              </a>
-															<ul class="linklist list--unstyled" role="list">
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">How it works</a>
-																</li>
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">IPL Technology</a>
-																</li>
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">Compare Products</a>
-																</li>
-															</ul>
-														</div>
-														<div class="mega-menu__column"><a href="#"
-																class="mega-menu__title heading heading--small">Exclusive
-																Offer</a>
-															<ul class="linklist list--unstyled" role="list">
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">Ulike for PCOS</a>
-																</li>
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">Community Hero Discount</a>
-																</li>
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">Student Discount</a>
-																</li>
-																<li class="linklist__item">
-																	<a href="#"
-																		class="link--faded">Gift Cards</a>
-																</li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li class="header__linklist-item " data-item-title="No Shave Freedom">
-										<a class="header__linklist-link link--animated" href="./compare.html">Hair Removal</a>
-									</li>
-									<li class="header__linklist-item " data-item-title="About us ">
-										<a class="header__linklist-link link--animated" href="./survey.html">Take the Quiz</a>
-									</li>
-                  <li class="header__linklist-item " data-item-title="How it Works">
-                    <a class="header__linklist-link link--animated" href="./ILP.html">How it Works</a>
+            }
+        </style>
+
+        <store-header sticky="" transparent="" class="header header--bordered" role="banner">
+            <div class="container">
+                <div class="header__wrapper">
+                    <!-- LEFT PART -->
+                    <nav class="header__inline-navigation" role="navigation"><desktop-navigation>
+                            <ul class="header__linklist list--unstyled hidden-pocket hidden-lap" role="list">
+                                <li class="header__linklist-item " data-item-title="Air 3">
+                                    <a class="header__linklist-link link--animated"
+                                        href="./details.html">Air 3</a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="Air 2 ">
+                                    <a class="header__linklist-link link--animated"
+                                        href="./details.html">Air 2 </a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="How it Works">
+                                    <a class="header__linklist-link link--animated" href="./compare.html">Hair Removal</a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="How it Works">
+                                    <a class="header__linklist-link link--animated" href="./ILP.html">How it Works</a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="Results">
+                                    <a class="header__linklist-link link--animated"
+                                        href="./survey.html">Take the Quiz</a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="Results ">
+                                    <a class="header__linklist-link link--animated"
+                                        href="./review.html">Results </a>
+                                </li>
+                                <li class="header__linklist-item " data-item-title="About Us">
+                                    <a class="header__linklist-link link--animated" href="./blog/index.html">Blogs</a>
+                                </li>
+                            </ul>
+                        </desktop-navigation>
+                        <div class="header__icon-list ">
+                            <button is="toggle-button"
+                                class="header__icon-wrapper tap-area hidden-desk mb-menu-btn" aria-controls="mobile-menu-drawer"
+                                aria-expanded="true">
+                                <span class="visually-hidden">Navigation</span><svg focusable="false" width="18"
+                                    height="14" class="icon icon--header-hamburger   " viewBox="0 0 18 14">
+                                    <path d="M0 1h18M0 13h18H0zm0-6h18H0z" fill="none" stroke="currentColor"
+                                        stroke-width="1.3"></path>
+                                </svg></button><a href="#" is="toggle-link"
+                                class="header__icon-wrapper tap-area  hidden-desk" aria-controls="search-drawer"
+                                aria-expanded="false" aria-label="Search"><svg focusable="false" width="18"
+                                    height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
+                                    <path
+                                        d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
+                                        fill="none" stroke="currentColor" stroke-width="1.3"></path>
+                                </svg></a>
+                        </div>
+                    </nav>
+                    <script>
+                        $('.mb-menu-btn').click(function(){
+                            setTimeout(() => {
+                                $(this).attr('aria-expanded',true)
+                                $('#mobile-menu-drawer').attr('open','')
+                            }, 100);
+                        })
+                    </script>
+
+                    <!-- LOGO PART -->
+                    <h1 class="header__logo"><a class="header__logo-link" href="./index.html"><span
+                                class="visually-hidden">Ulike US Shop</span>
+                            <img class="header__logo-image" width="291" height="65"
+                                src="./images/logo.svg"
+                                alt=""><img class="header__logo-image header__logo-image--transparent" width="453"
+                                height="103"
+                                src="./images/logo.png"
+                                alt=""></a></h1><!-- SECONDARY LINKS PART -->
+                    <div class="header__secondary-links">
+                        <div class="header__icon-list">
+                                <a href="#" is="toggle-link"
+                                class="header__icon-wrapper tap-area hidden-pocket hidden-lap " aria-label="Search"
+                                aria-controls="search-drawer" aria-expanded="false"><svg focusable="false"
+                                    width="18" height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
+                                    <path
+                                        d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
+                                        fill="none" stroke="currentColor" stroke-width="1.3"></path>
+                                </svg></a><a href="#"
+                                class="header__icon-wrapper tap-area hidden-phone " aria-label="Login"><svg
+                                    focusable="false" width="18" height="17" class="icon icon--header-customer   "
+                                    viewBox="0 0 18 17">
+                                    <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.3"
+                                        stroke-linejoin="round"></circle>
+                                    <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor"
+                                        stroke-width="1.3"></path>
+                                </svg></a><a href="/cart" is="toggle-link" aria-controls="mini-cart"
+                                aria-expanded="false" class="header__icon-wrapper tap-area " aria-label="Cart"
+                                data-no-instant=""><svg focusable="false" width="20" height="19"
+                                    class="icon icon--header-tote-bag   " viewBox="0 0 20 19">
+                                    <path d="M3 7H17L18 18H2L3 7Z" fill="none" stroke="currentColor"
+                                        stroke-width="1.3"></path>
+                                    <path d="M13 4V4C13 2.34315 11.6569 1 10 1V1C8.34315 1 7 2.34315 7 4V4"
+                                        fill="none" stroke="currentColor" stroke-width="1.3"></path>
+                                </svg><cart-count
+                                    class="header__cart-count header__cart-count--floating bubble-count">0</cart-count>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </store-header><cart-notification global="" hidden="" class="cart-notification "></cart-notification>
+        <script>
+            (() => {
+                const headerElement = document.getElementById('shopify-section-sections--16782741864689__header'),
+                    headerHeight = headerElement.clientHeight,
+                    headerHeightWithoutBottomNav = headerElement.querySelector('.header__wrapper').clientHeight;
+
+                document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+                document.documentElement.style.setProperty('--header-height-without-bottom-nav',
+                    headerHeightWithoutBottomNav + 'px');
+            })();
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Ulike US Shop",
+
+
+                "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0656\/9079\/6273\/files\/Logo_6d39648c-6adc-452f-bb0c-0d1e66cc0e30_291x.png?v=1690337019",
+
+                "url": "https:\/\/ulike.com"
+            }
+        </script>
+
+    </div>
+    <mobile-navigation id="mobile-menu-drawer" class="drawer drawer--from-left">
+        <span class="drawer__overlay"></span>
+
+        <div class="drawer__header drawer__header--shadowed">
+            <button type="button" class="drawer__close-button drawer__close-button--block tap-area"
+                data-action="close" title="Close"><svg focusable="false" width="14" height="14"
+                    class="icon icon--close   " viewBox="0 0 14 14">
+                    <path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="1.3" fill="none"></path>
+                </svg></button>
+        </div>
+
+        <div class="drawer__content">
+            <ul class="mobile-nav list--unstyled" role="list">
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a
+                        href="./details.html" class="mobile-nav__link heading h5">Air
+                        3</a></li>
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a
+                        href="./details.html"
+                        class="mobile-nav__link heading h5">Air 2 </a></li>
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a href="./compare.html"
+                        class="mobile-nav__link heading h5">Hair Removal</a></li>
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a
+                        href="./survey.html" class="mobile-nav__link heading h5">Take the Quiz</a>
                 </li>
-									<li class="header__linklist-item " data-item-title="Support">
-										<a class="header__linklist-link link--animated" href="./review.html">Results</a>
-									</li>
-									<li class="header__linklist-item " data-item-title="Blogs">
-										<a class="header__linklist-link link--animated" href="./blog/index.html">Blogs</a>
-									</li>
-								</ul>
-							</desktop-navigation>
-							<div class="header__icon-list "><button is="toggle-button"
-									class="header__icon-wrapper tap-area hidden-desk" aria-controls="mobile-menu-drawer"
-									aria-expanded="false">
-									<span class="visually-hidden">Navigation</span><svg focusable="false" width="18"
-										height="14" class="icon icon--header-hamburger   " viewBox="0 0 18 14">
-										<path d="M0 1h18M0 13h18H0zm0-6h18H0z" fill="none" stroke="currentColor"
-											stroke-width="1.3"></path>
-									</svg></button><a href="/search" is="toggle-link"
-									class="header__icon-wrapper tap-area  hidden-desk" aria-controls="search-drawer"
-									aria-expanded="false" aria-label="Search"><svg focusable="false" width="18"
-										height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
-										<path
-											d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
-											fill="none" stroke="currentColor" stroke-width="1.3"></path>
-									</svg></a>
-							</div>
-						</nav>
-
-						<!-- LOGO PART -->
-						<h1 class="header__logo"><a class="header__logo-link" href="./home.html"><span
-									class="visually-hidden">Ulike US Shop</span>
-								<img class="header__logo-image" width="291" height="65"
-									src="./images/logo.svg"
-									alt=""><img class="header__logo-image header__logo-image--transparent" width="453"
-									height="103"
-									src="./images/logo.png"
-									alt=""></a></h1><!-- SECONDARY LINKS PART -->
-						<div class="header__secondary-links">
-							<div class="header__icon-list">
-                  <a href="#" is="toggle-link"
-									class="header__icon-wrapper tap-area hidden-pocket hidden-lap " aria-label="Search"
-									aria-controls="search-drawer" aria-expanded="false"><svg focusable="false"
-										width="18" height="18" class="icon icon--header-search   " viewBox="0 0 18 18">
-										<path
-											d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17"
-											fill="none" stroke="currentColor" stroke-width="1.3"></path>
-									</svg></a><a href="#"
-									class="header__icon-wrapper tap-area hidden-phone " aria-label="Login"><svg
-										focusable="false" width="18" height="17" class="icon icon--header-customer   "
-										viewBox="0 0 18 17">
-										<circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.3"
-											stroke-linejoin="round"></circle>
-										<path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor"
-											stroke-width="1.3"></path>
-									</svg></a><a href="/cart" is="toggle-link" aria-controls="mini-cart"
-									aria-expanded="false" class="header__icon-wrapper tap-area " aria-label="Cart"
-									data-no-instant=""><svg focusable="false" width="20" height="19"
-										class="icon icon--header-tote-bag   " viewBox="0 0 20 19">
-										<path d="M3 7H17L18 18H2L3 7Z" fill="none" stroke="currentColor"
-											stroke-width="1.3"></path>
-										<path d="M13 4V4C13 2.34315 11.6569 1 10 1V1C8.34315 1 7 2.34315 7 4V4"
-											fill="none" stroke="currentColor" stroke-width="1.3"></path>
-									</svg><cart-count
-										class="header__cart-count header__cart-count--floating bubble-count">0</cart-count>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</store-header><cart-notification global="" hidden="" class="cart-notification "></cart-notification>
-			<script>
-				(() => {
-					const headerElement = document.getElementById('shopify-section-sections--16782741864689__header'),
-						headerHeight = headerElement.clientHeight,
-						headerHeightWithoutBottomNav = headerElement.querySelector('.header__wrapper').clientHeight;
-
-					document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
-					document.documentElement.style.setProperty('--header-height-without-bottom-nav',
-						headerHeightWithoutBottomNav + 'px');
-				})();
-			</script>
-
-			<script type="application/ld+json">
-				{
-					"@context": "https://schema.org",
-					"@type": "Organization",
-					"name": "Ulike US Shop",
-
-
-					"logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0656\/9079\/6273\/files\/Logo_6d39648c-6adc-452f-bb0c-0d1e66cc0e30_291x.png?v=1690337019",
-
-					"url": "https:\/\/ulike.com"
-				}
-			</script>
-
-		</div>
-    <mobile-navigation id="mobile-menu-drawer" class="drawer drawer--from-left menu-diy-m">
-			<span class="drawer__overlay"></span>
-
-			<div class="drawer__header drawer__header--shadowed">
-				<button type="button" class="drawer__close-button drawer__close-button--block tap-area"
-					data-action="close" title="Close"><svg focusable="false" width="14" height="14"
-						class="icon icon--close   " viewBox="0 0 14 14">
-						<path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="1.3" fill="none"></path>
-					</svg></button>
-			</div>
-      <style>
-        .menu-diy-m .mobile-nav__image-push{
-          position: relative;
-        }
-        .menu-diy-m .menu-tag{
-          position: absolute;
-          background: #d22f4c;
-          font-size: 12px;
-          font-weight: bold;
-          color: #fff;
-          top: 6px;
-          left: 6px;
-          z-index: 3;
-          padding: 2px 6px;
-          line-height: 1.2;
-          overflow: hidden;
-        }
-
-        .menu-diy-m .menu-tag::before {
-          position: absolute;
-          content: "";
-          display: block;
-          width: 200%;
-          height: 200%;
-          z-index: 2;
-          background: linear-gradient(
-            -45deg,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.5) 50%,
-            rgba(255, 255, 255, 0) 60%
-          );
-          animation: menuScanning 3s linear infinite;
-        }
-        @keyframes menuScanning {
-          0% {
-            transform: translate(-100%, -100%);
-          }
-          100% {
-            transform: translate(100%, 100%);
-          }
-        }
-        .menu-diy-m .flex-diy{
-          display: flex;
-          flex-direction: column-reverse;
-        }
-        .menu-diy-m .menu-img-txt{
-          position: absolute;
-          width: 100%;
-          left: 0;
-          bottom: 40px;
-          z-index: 2;
-        }
-        .menu-diy-m .mobile-nav__image-heading{
-          color: #fff;
-          margin-bottom: 0;
-
-        }
-        .menu-diy-m .mobile-nav__image-text{
-          font-size: 12px;
-          color: #fff;
-          zoom: .6;
-        }
-        .menu-diy-m .mobile-nav__image{
-          margin-bottom: 10px;
-        }
-        .menu-diy-m .more-btn{
-          color: #000;
-          text-decoration: underline;
-          line-height: 1;
-        }
-        [dir="ltr"] .menu-diy-m .mobile-nav .mobile-nav .mobile-nav{
-          padding-left: 0;
-          border: 0;
-        }
-        .menu-diy-m button.mobile-nav__link{
-          color: #000;
-          font-weight: bold;
-        }
-      </style>
-			<div class="drawer__content">
-				<ul class="mobile-nav list--unstyled" role="list">
-					<li class="mobile-nav__item" data-level="1"><button is="toggle-button"
-							class="mobile-nav__link heading h5" aria-controls="mobile-menu-1" aria-expanded="true">Shop
-							Our Products<span class="animated-plus"></span>
-						</button>
-
-						<collapsible-content id="mobile-menu-1" class="collapsible flex-diy" open>
-							<ul class="mobile-nav list--unstyled" role="list">
-								<li class="mobile-nav__item" data-level="2">
-                  <button is="toggle-button"
-										class="mobile-nav__link" aria-controls="mobile-menu-1-1"
-										aria-expanded="true">
-                    Product Knowledge
-									</button>
-									<collapsible-content id="mobile-menu-1-1" class="collapsible" open>
-										<ul class="mobile-nav list--unstyled" role="list">
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">How it works</a>
-											</li>
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#" class="mobile-nav__link">IPL
-													Technology</a>
-											</li>
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">Compare Products</a>
-											</li>
-										</ul>
-									</collapsible-content>
-								</li>
-								<li class="mobile-nav__item" data-level="2">
-                  <button is="toggle-button"
-										class="mobile-nav__link" aria-controls="mobile-menu-1-2"
-										aria-expanded="true">
-                    Exclusive Offer
-									</button>
-
-									<collapsible-content id="mobile-menu-1-2" class="collapsible" open>
-										<ul class="mobile-nav list--unstyled" role="list">
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">Ulike for PCOS</a>
-											</li>
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">Community Hero Discount</a>
-											</li>
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">Student Discount</a>
-											</li>
-											<li class="mobile-nav__item" data-level="3">
-												<a href="#"
-													class="mobile-nav__link">Gift Cards</a>
-											</li>
-										</ul>
-									</collapsible-content>
-								</li>
-							</ul>
-							<div class="mobile-nav__images-wrapper  hide-scrollbar">
-								<div class="mobile-nav__images-scroller">
-									<div class="mobile-nav__image-push">
-                    <img
-											src="./images/nav1_m.png"
-											alt=""
-											class="mobile-nav__image">
-                      <div class="menu-tag">60%OFF</div>
-                      <div class="menu-img-txt">
-                        <p class="mobile-nav__image-heading heading heading--xsmall">
-                          Ulike Sapphire Air3
-                        </p>
-                        <span class="mobile-nav__image-text text--xsmall">
-                          Faster, Cooler, Lighter,Stronger
-                        </span>
-                      </div>
-                      <div class="more-btn">Learn More ></div>
-									</div>
-									<div class="mobile-nav__image-push"><img
-											src="./images/nav2_m.png"
-											alt=""
-											class="mobile-nav__image">
-                      <div class="menu-img-txt">
-                        <p class="mobile-nav__image-heading heading heading--xsmall">
-                          Ulike Sapphire Air+
-                        </p>
-                        <span class="mobile-nav__image-text text--xsmall">
-                          Sapphire-Patented Classic:First Gen
-                        </span>
-                      </div>
-                      <div class="more-btn">Learn More ></div>
-									</div>
-								</div>
-							</div>
-						</collapsible-content>
-					</li>
-					<li class="mobile-nav__item" data-level="1">
-            <a href="./compare.html" class="mobile-nav__link heading h5">Hair Removal</a>
-          </li>
-					<li class="mobile-nav__item" data-level="1">
-            <a href="./ILP.html" class="mobile-nav__link heading h5">How it Works</a>
-          </li>
-					<li class="mobile-nav__item" data-level="1">
-            <a href="./survey.html" class="mobile-nav__link heading h5">Take the Quiz </a>
-          </li>
-					<li class="mobile-nav__item" data-level="1">
-            <a href="./review.html" class="mobile-nav__link heading h5">Results</a>
-          </li>
-					<li class="mobile-nav__item" data-level="1">
-            <a href="./blog/index.html" class="mobile-nav__link heading h5">Blogs</a>
-          </li>
-				</ul>
-			</div>
-			<div class="drawer__footer drawer__footer--tight drawer__footer--bordered">
-				<div class="mobile-nav__footer"><a class="icon-text" href="#"><svg focusable="false"
-							width="18" height="17" class="icon icon--header-customer   " viewBox="0 0 18 17">
-							<circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.3"
-								stroke-linejoin="round"></circle>
-							<path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor"
-								stroke-width="1.3"></path>
-						</svg>Account</a></div>
-			</div>
-		</mobile-navigation>
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a href="./review.html"
+                        class="mobile-nav__link heading h5">Results </a></li>
+                <li class="mobile-nav__item" data-level="1" style="opacity: 1;"><a href="./blog/index.html"
+                        class="mobile-nav__link heading h5">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="drawer__footer drawer__footer--tight drawer__footer--bordered" style="opacity: 1;">
+            <div class="mobile-nav__footer"><a class="icon-text" href="#"><svg focusable="false"
+                        width="18" height="17" class="icon icon--header-customer   " viewBox="0 0 18 17">
+                        <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.3"
+                            stroke-linejoin="round"></circle>
+                        <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor"
+                            stroke-width="1.3"></path>
+                    </svg>Account</a></div>
+        </div>
+    </mobile-navigation>
     <!-- END sections: header-group --><!-- BEGIN sections: overlay-group -->
     <div
       id="shopify-section-sections--16782742782193__newsletter-popup"
@@ -1462,6 +1122,9 @@
             --section-animation-play-state: paused;
             background-color: rgba(0, 0, 0, 0);
             /* Allows to set a placeholder color while loading */
+            background: #fff;
+            position: relative;
+            z-index: 3;
           }
 
           #block-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071-be85bf91-b8e3-4ca4-8579-3bb5a79137da {
@@ -1488,6 +1151,20 @@
             --section-blocks-overlay-opacity: 0;
           }
 
+          @media (min-width:1600px) {
+            #shopify-section-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071 {
+              --heading-large-font-size:65px;
+            }
+          }
+          @media (min-width:1400px) {
+            #shopify-section-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071 {
+              --heading-large-font-size:60px;
+            }
+          }
+          .button.button--primary.button--animate{
+            background: #000;
+          }
+
           .slide-show-icons__custom-icon-start {
             display: inline-block !important;
             margin: auto 20px !important;
@@ -1510,9 +1187,31 @@
             object-fit: cover;
           }
 
+          @media (max-width:1400px) {
+            .content-box .heading--large{
+                font-size: 34px;
+            }
+          }
+
           @media screen and (max-width: 740px){
             .vertical-breather.spring.mother.home.summer {
               padding-bottom: 60px;
+            }
+            .slideshow__text-wrapper.spring.summer .button.button--primary.button--animate{
+                --button-height:50px;
+            }
+            .content-box .heading--large{
+                font-size: 28px;
+            }
+            .slideshow .slideshow-tag{
+                font-size: 14px;
+            }
+            .mobile-content-box--center{
+              margin-left: 0 !important;
+              margin-right: 0 !important;
+            }
+            .spring .discount-txt{
+              font-size: 14px;
             }
           }
           @media screen and (max-width: 768px) {
@@ -1536,8 +1235,19 @@
             }
 
             .sale-banner-home .content-box--medium {
-              width: 100%;
+              /* width: 100%;
               max-width: 1360px;
+              margin-left: 0; */
+            }
+            .banner-diy-box .content-box--medium{
+              width: 100%;
+              max-width: 700px;
+              margin-left: 0;
+            }
+
+            .banner-diy-box .heading--large{
+              letter-spacing: 2px;
+              font-weight: normal;
             }
           }
 
@@ -1563,7 +1273,7 @@
             font-weight: bold;
             line-height: 1.2;
             padding: 7px 14px;
-            background: #d22f4c;
+            background: #e7004c;
             position: relative;
             overflow: hidden;
             /* margin-bottom: 5px; */
@@ -1625,25 +1335,23 @@
                   </div>
                   <div class="container">
                     <div
-                      class="slideshow__text-wrapper slideshow__text-wrapper--middle mobile-slideshow__text-wrapper--bottom vertical-breather spring mother summer home"
+                      class="slideshow__text-wrapper slideshow__text-wrapper--middle mobile-slideshow__text-wrapper--bottom vertical-breather spring mother summer home banner-diy-box"
                     >
                       <div
                         class="content-box content-box--medium content-box--text-left content-box--left mobile-content-box--text-center mobile-content-box--center text-container"
                       >
                         <h2 class="heading heading--large home-heading__h2">
-                          <split-lines reveal>Shave Dilemmas,
-                            Meet IPL Solutions! </split-lines>
+                          <split-lines reveal>Hair Removal</split-lines>
+                          <split-lines reveal>That Lasts </split-lines>
                         </h2>
                         <div class="heading discount-txt">
-                          <split-lines reveal>Break Free from the Endless Cycle and Embrace the Freedom of NO Shave</split-lines
+                          <split-lines reveal>Stop the endless cycle of shaving, Try IPL.</split-lines
                           >
                         </div>
                         <div class="button-wrapper" reveal>
-                          <a
-                            href="#"
-                            class="button button--primary home-btn button--animate"
-                            >LEARN MORE ></a
-                          >
+                          <a href="#" class="button button--primary home-btn button--animate">
+                            LEARN MORE >
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -1658,28 +1366,18 @@
               >
                 <div class="slideshow__slide-inner">
                   <div class="slideshow__image-wrapper hidden-pocket">
-                    <a
-                      href="#"
-                      class="home_img_url-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071"
-                      ><img
-                        src="./images/banner1.jpg"
-                        alt=""
-                        class="slideshow__image"
-                    /></a>
+                    <a href="#" class="home_img_url-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071">
+                      <img src="./images/banner1.png" alt="" class="slideshow__image" />
+                    </a>
                   </div>
                   <div class="slideshow__image-wrapper hidden-lap-and-up">
-                    <a
-                      href="#"
-                      class="home_img_url-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071"
-                      ><img
-                        src="./images/banner2.jpg"
-                        alt=""
-                        class="slideshow__image"
-                    /></a>
+                    <a href="#" class="home_img_url-template--16687199682801__e3a7c817-97ab-4e58-801b-4f752bdf4071">
+                      <img src="./images/banner-m2.png" alt="" class="slideshow__image"/>
+                    </a>
                   </div>
                   <div class="container">
                     <div
-                      class="slideshow__text-wrapper slideshow__text-wrapper--middle mobile-slideshow__text-wrapper--bottom vertical-breather sale-banner-home spring mother summer home"
+                      class="slideshow__text-wrapper slideshow__text-wrapper--middle mobile-slideshow__text-wrapper--bottom vertical-breather banner-diy-box sale-banner-home spring mother summer home"
                     >
                       <div
                         class="content-box content-box--medium content-box--text-left content-box--left mobile-content-box--text-center mobile-content-box--center text-container"
@@ -1689,13 +1387,11 @@
                         </split-lines>
                         <h2 class="heading heading--large home-heading__h2" style="margin-top: 0;">
                           <split-lines reveal>
-                            Introducing Pretty in Pink
+                            Power is You
                           </split-lines>
                         </h2>
                         <h3 class="heading discount-txt">
-                          <split-lines reveal
-                            >Summer Limited Edition</split-lines
-                          >
+                          <split-lines reveal>Celebrating our 10th anniversary.</split-lines>
                         </h3>
                         <div class="button-wrapper" reveal>
                           <a
@@ -1730,718 +1426,917 @@
       </div>
     </div>
     <!-- 自定义内容 -->
-    <div class="page-partition-box">
-      <div class="container">
-        <div class="page-partition-list">
-          <div
-            class="page-partition-item to-top"
-            style="transition-delay: 0.1s"
-          >
-            <img class="img" src="./images/1.jpg" alt=""  />
-            <div class="page-partition-text">
-              <h3 class="page-partition-h3 text-top">How it works</h3>
-              <div class="page-partition-p text-top">Visible Results In 3 Weeks</div>
-              <a href="#" class="page-partition-btn btn-diy">
-                <div class="btn-txt" text="Learn more  >">
-                  <span>Learn more  ></span>
+    <div class="preface-box">
+        <div class="container">
+            <div class="preface-cont">
+                <div class="preface-left">
+                    <div class="preface-title text-top">Hair removal from the comfort of home.</div>
                 </div>
-              </a>
-            </div>
-          </div>
-          <div
-            class="page-partition-item to-top"
-            style="transition-delay: 0.2s"
-          >
-            <img class="img" src="./images/b2.png" alt=""  />
-            <div class="page-partition-text">
-              <h3 class="page-partition-h3 text-top">Can’t decide?</h3>
-              <div class="page-partition-p text-top">
-                Compare Hair Removal <br />
-                Devices devices
-              </div>
-              <a href="#" class="page-partition-btn btn-diy">
-                <div class="btn-txt" text="Learn more  >">
-                  <span>Learn more  ></span>
+                <div class="preface-right text-top">Beauty is not just about looking good, it’s about feeling good too. Join us in empowering women worldwide with innovative IPL beauty solutions from the comfort of home.
                 </div>
-              </a>
             </div>
-          </div>
-          <div
-            class="page-partition-item to-top"
-            style="transition-delay: 0.3s"
-          >
-            <img class="img" src="./images/b3.png" alt=""  />
-            <div class="page-partition-text">
-              <h3 class="page-partition-h3 text-top">Take the Quiz</h3>
-              <div class="page-partition-p text-top">Which device is best for you?</div>
-              <a href="#" class="page-partition-btn btn-diy">
-                <div class="btn-txt" text="Learn more  >">
-                  <span>Learn more  ></span>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <div class="product-area-box">
-      <div class="product-area-list">
-        <div class="product-area-item slide-to-left">
-          <img class="img pc-box" src="./images/c1.png" alt=""  />
-          <img class="img mb-box" src="./images/p1.jpg" alt=""  />
-          <div class="product-area-cont">
-            <div class="product-area-h3">
-              <div class="text-top" style="transition-delay: 0.8s">
-                Ulike Sapphire Air3 IPL Hair Removal Handset
-              </div>
-              
-            </div>
-            <div class="product-area-p">
-              <div class="text-top" style="transition-delay: 1.2s">
-                Faster, Cooler, Lighter, Stronger
-              </div>
-            </div>
-            <div class="product-area-btn-box">
-              <div class="product-area-btn">
-                <a href="#" class="product-area-btn-item btn-diy to-top" style="transition-delay: 1.6s">
-                  <div class="btn-txt" text="Learn more >">
-                    <span> Learn more > </span>
-                  </div>
-                </a>
-                <a href="#" class="product-area-btn-item btn-diy to-top" style="transition-delay: 1.7s">
-                  <div class="btn-txt" text="Shop now >">
-                    <span>Shop now ></span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="container">
+           <div class="product-area-list">
+               <div class="product-area-item to-top" style="transition-delay: 0.1s">
+                   <div class="product-area-tag">NEW</div>
+                   <div class="product-area-img-list">
+                       <div class="product-area-img-item active">
+                           <img class="img" src="./images3/a1.png" alt=""  />
+                       </div>
+                       <div class="product-area-img-item">
+                           <img class="img" src="./images3/a11.jpg" alt=""  />
+                       </div>
+                       <div class="product-area-img-item">
+                           <img class="img" src="./images3/a12.jpg" alt=""  />
+                       </div>
+                   </div>
+                   <div class="product-area-cont">
+                       <h3 class="product-area-h3 text-top">
+                            Ulike Air 3
+                       </h3>
+                       <div class="product-area-p text-top">
+                            Visible results in just 3 weeks
+                       </div>
+                       <div class="product-area-dot to-top">
+                            <div class="product-area-dot-item active" style="background:linear-gradient(to bottom ,#9e9bcf,#6867a0);"></div>
+                            <div class="product-area-dot-item" style="background:linear-gradient(to bottom ,#ffffff,#d9dadb);"></div>
+                            <div class="product-area-dot-item" style="background:linear-gradient(to bottom ,#ffebeb,#e6c8c6);"></div>
+                        </div>
+                       <div class="product-area-btn-box">
+                        <div class="product-area-btn to-top">
+                            <a href="#" class="product-area-btn-item btn-diy">
+                            <div class="btn-txt" text="Learn more >">
+                                <span> Learn more &gt; </span>
+                            </div>  
+                            </a>
+                            <a href="#" class="product-area-btn-item btn-diy">
+                            <div class="btn-txt" text="Shop now >">
+                                <span>Shop now &gt;</span>
+                            </div>
+                            </a>
+                        </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="product-area-item to-top" style="transition-delay: 0.2s">
+                   <div class="product-area-tag">HOT</div>
+                   <div class="product-area-img-list">
+                       <div class="product-area-img-item active">
+                           <img class="img" src="./images3/a2.png" alt=""  />
+                       </div>
+                       <div class="product-area-img-item">
+                           <img class="img" src="./images3/a21.jpg" alt=""  />
+                       </div>
+                   </div>
+                   <div class="product-area-cont">
+                       <h3 class="product-area-h3 text-top">
+                            Ulike Air 2
+                       </h3>
+                       <div class="product-area-p text-top">
+                            Visible results in 4 weeks
+                       </div>
+                       <div class="product-area-dot to-top">
+                            <div class="product-area-dot-item active" style="background:linear-gradient(to bottom ,#71b9af,#15332e);"></div>
+                            <div class="product-area-dot-item" style="background:linear-gradient(to bottom ,#ffffff,#d7d7d7);"></div>
+                        </div>
+                       <div class="product-area-btn-box">
+                            <div class="product-area-btn to-top">
+                                <a href="#" class="product-area-btn-item btn-diy">
+                                <div class="btn-txt" text="Learn more >">
+                                    <span>Learn more > </span>
+                                </div>
+                                </a>
+                                <a href="#" class="product-area-btn-item btn-diy">
+                                  <div class="btn-txt" text="Shop now >">
+                                      <span>Shop now ></span>
+                                  </div>
+                                </a>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
         </div>
-        <div class="product-area-item slide-to-left">
-          <img class="img pc-box" src="./images/c2.png" alt=""  />
-          <img class="img mb-box" src="./images/p2.jpg" alt=""  />
-          <div class="product-area-cont">
-            <h3 class="product-area-h3">
-              <div class="text-top" style="transition-delay: 0.8s">
-                Ulike Sapphire Air+ IPL Hair Removal Handset
-              </div>
-            </h3>
-            <div class="product-area-p">
-              <div class="text-top" style="transition-delay: 1.2s">
-                Sapphire-Patented Classic: First Gen
-              </div>
+    </div>
+    <script>
+        window.addEventListener('load',function(){
+            $('html').on('click','.product-area-box .product-area-dot-item',function(){
+                let $this = $(this)
+                let index = $this.index()
+                if($this.hasClass('active')) return
+                $this.closest('.product-area-item').find('.product-area-img-item.close').removeClass('close')
+                $this.addClass('active').siblings().removeClass('active')
+                $this.closest('.product-area-item').find('.product-area-img-item.active').removeClass('active').addClass('close')
+                $this.closest('.product-area-item').find('.product-area-img-item').eq(index).addClass('active')
+                setTimeout(()=>{
+                    $this.closest('.product-area-item').find('.product-area-img-item.close').removeClass('close')
+                },600)
+            })
+        })
+    </script>
+
+    <div class="brand-story-box">
+        <img src="./images3/b2.png" alt="" class="brand-story-bg pc-box to-opacity">
+        <img src="./images3/b3.jpg" alt="" class="brand-story-bg mb-box to-opacity">
+        <div class="brand-story-top">
+            <div class="container">
+                <div class="brand-story-cont">
+                    <div class="brand-story-play to-top" data-src="https://www.youtube.com/embed/MTSt4QCFXfE?playsinline=1&amp;autoplay=1&amp;controls=1&amp;mute=1&amp;loop=1&amp;playlist=MTSt4QCFXfE&amp;enablejsapi=1&amp;rel=0&amp;modestbranding=1&amp;origin=https%3A%2F%2Fulikeofficial.myshopify.com">
+                        <div class="play-btn">
+                            <span class="span1"></span>
+                            <!-- <span class="span2"></span> -->
+                        </div>
+                    </div>
+                    <div class="brand-story-txt" style="transition-delay: 0.3s">
+                        <div class="brand-story-p text-top" style="transition-delay: 0.6s">
+                            Our Contribution To Women Worldwide
+                        </div>
+                        <div class="brand-story-title text-top" style="transition-delay: 0.8s">
+                            Redefine your beauty routine.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="product-area-btn-box">
-              <div class="product-area-btn">
-                <a href="#" class="product-area-btn-item btn-diy to-top" style="transition-delay: 1.6s">
-                  <div class="btn-txt" text="Learn more >">
-                    <span>Learn more > </span>
-                  </div>
-                </a>
-                <a href="#" class="product-area-btn-item btn-diy to-top" style="transition-delay: 1.7s">
-                  <div class="btn-txt" text="Shop now >">
-                    <span>Shop now ></span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+        </div>
+    </div>
+    <div class="brand-story-popup">
+      <div class="brand-story-popup-cont">
+        <div class="brand-story-popup-video">
+          <iframe title="" src="" allow="autoplay;" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="brand-story-popup-close">
         </div>
       </div>
     </div>
-    <div class="sub-activity-box">
-      <div class="container">
-        <div class="title-diy text-top">Our Big Events</div>
-        <div class="sub-activity-list">
-          <div class="sub-activity-item to-top" style="transition-delay: 0.1s">
-            <img class="img" src="./images/d1.png" alt="" />
-            <div class="sub-activity-cont">
-              <div>
-                <div class="sub-activity-title text-top" style="transition-delay: 0.3s">Ulike For PCOS</div>
-                <div class="sub-activity-p text-top" style="transition-delay: 0.4s">
-                  Together, we stand with the PCOS <br />community, offering
-                  care, support, and
-                </div>
-                <a href="#" class="sub-activity-btn btn-diy text-top-btn" style="transition-delay: 1s">
-                  <div class="btn-txt" text="Learn more >">
-                    <span>Learn more ></span>
+
+    <script>
+      window.addEventListener('load',function(){
+        $('html').on('click','.brand-story-box .brand-story-play',function(){
+          $('.brand-story-popup iframe').attr('src',$(this).attr('data-src'))
+          $('.brand-story-popup').fadeIn()
+        })
+        $('html').on('click','.brand-story-popup .brand-story-popup-close',function(){
+          $('.brand-story-popup').fadeOut()
+          $('.brand-story-popup iframe').attr('src','')
+        })
+      })
+    </script>
+
+    <div class="media-evaluation-real-box">
+        <div class="media-evaluation-real">
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.1s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.1s">I recommend this 1,000  times!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.1s">I love Ulike, just 4 weeks and I already see a huge difference! Totally pain-free!!!</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span> Shayden Thomas</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
                   </div>
-                </a>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f1-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f1.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f1.jpg" alt=""  />
+                </picture>
               </div>
             </div>
           </div>
-          <div class="sub-activity-item to-top" style="transition-delay: 0.2s">
-            <img class="img" src="./images/d2.png" alt="" />
-            <div class="sub-activity-cont">
-              <div>
-                <div class="sub-activity-title text-top" style="transition-delay: 0.5s">
-                  Honouring <br />Community Heroes
-                </div>
-                <div class="sub-activity-p text-top" style="transition-delay: 0.7s">
-                  Enter a speciality occupation to <br />
-                  receive an exclusive discount
-                </div>
-                <a href="#" class="sub-activity-btn btn-diy text-top-btn" style="transition-delay: 1.2s">
-                  <div class="btn-txt" text="Learn more >">
-                    <span>Learn more ></span>
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.2s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.2s">Smoother and happler than ever!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.2s">I've only used it for 3 weeks and found significant reduction in hair growth, so I don't have to shave every next day.</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span> Mirabella Marchiorlatti</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
                   </div>
-                </a>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f2-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f2.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f2.jpg" alt=""  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.3s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.3s">I recommend this 1,000  times!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.3s">I love Ulike, just 4 weeks and I already see a huge difference! Totally pain-free!!!</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span> Isabella Davis</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
+                  </div>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f3-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f3.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f3.jpg" alt=""  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.4s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.1s">I recommend this 1,000  times!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.1s">I love Ulike, just 4 weeks and I already see a huge difference! Totally pain-free!!!</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span> Raven Mapanao</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
+                  </div>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f4-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f4.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f4.jpg" alt=""  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.4s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.1s">I recommend this 1,000  times!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.1s">I love Ulike, just 4 weeks and I already see a huge difference! Totally pain-free!!!</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span> Ben Philpot</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
+                  </div>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f5-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f5.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f5.jpg" alt=""  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="media-evaluation-real-item to-top" style="transition-delay: 0.4s">
+            <div class="media-evaluation-real-cont">
+                <div class="media-evaluation-real-star to-top">★★★★★</div>
+                <div class="media-evaluation-real-title text-top" style="transition-delay: 0.1s">I recommend this 1,000  times!</div>
+                <div class="media-evaluation-real-p text-top" style="transition-delay: 0.1s">I love Ulike, just 4 weeks and I already see a huge difference! Totally pain-free!!!</div>
+                <div class="media-evaluation-real-name text-top" style="transition-delay: 0.6s"><span class="span">-</span>Makaio Michaels</div>
+                <div class="media-evaluation-real-btn btn-diy">
+                  <div class="btn-txt" text="See Results >">
+                    <span>See Results ></span>
+                  </div>
+                </div>
+            </div>
+            <div class="media-evaluation-real-img to-top">
+              <div class="media-real-img-item active">
+                <picture class="dropdown__picture">
+                  <source srcset="./images3/f6-1.jpg"
+                    media="(max-width: 890px)">
+                  <source srcset="./images3/f6.jpg"
+                    media="(min-width: 891px)">
+                  <img src="./images3/f6.jpg" alt=""  />
+                </picture>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="container">
+            <div class="media-real-bottom">
+                <div class="media-real-dot to-top">
+                    <div class="media-real-dot-item"></div>
+                    <div class="media-real-dot-item"></div>
+                    <div class="media-real-dot-item"></div>
+                    <div class="media-real-dot-item"></div>
+                    <div class="media-real-dot-item"></div>
+                    <div class="media-real-dot-item"></div>
+                </div>
+                <div class="media-real-arrow to-top">
+                    <div class="media-real-bottom-arrow-item"></div>
+                    <div class="media-real-bottom-arrow-item"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="media-evaluation-box">
-      <div class="container">
-        <div class="media-evaluation-top">
-          <div class="title-diy text-top">Real Results From Verified Ulike</div>
-          <div class="media-evaluation-tab to-top" style="transition-delay: 0.2s">
-            <div class="media-evaluation-tab-item active">Media reviews</div>
-            <div class="media-evaluation-tab-item">Real reviews</div>
-            <span class="bg-tag"></span>
+    <div class="review-list-popup">
+      <div class="review-list-popup-cont">
+        <div class="review-list-popup-title">Hair removal cycle</div>
+        <div class="review-list-popup-img">
+          <div class="review-list-popup-item">
+            <img src="./images8/a11.png" alt="" class="img">
+            <div class="review-list-tag">Before</div>
+          </div>
+          <div class="review-list-popup-item">
+            <img src="./images8/a12.png" alt="" class="img">
+            <div class="review-list-tag">Week 1-4</div>
+          </div>
+          <div class="review-list-popup-item">
+            <img src="./images8/a13.png" alt="" class="img">
+            <div class="review-list-tag">Week 5-8</div>
+          </div>
+          <div class="review-list-popup-item">
+            <img src="./images8/a14.png" alt="" class="img">
+            <div class="review-list-tag">Week 9-12</div>
           </div>
         </div>
       </div>
-      <div class="media-evaluation-marquee-list">
-        <div class="media-evaluation-marquee marquee-box">
-          <div class="media-evaluation-list marquee-box-list">
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.1s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">It offers the  best performance, features and   I could find at a very reasonable price: more for less.</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e1.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.2s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e2.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.3s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">easy, and effective. I have thick and plentiful underarm hair due to my genetics. And 3 weeks in, 6x use I would say I have 75% hair reduction!”</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e3.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.4s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e4.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.5s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">It offers the  best performance, features and   I could find at a very reasonable price: more for less.</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e5.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.6s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e6.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.7s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">easy, and effective. I have thick and plentiful underarm hair due to my genetics. And 3 weeks in, 6x use I would say I have 75% hair reduction!”</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e7.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.8s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e8.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 0.9s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e9.png"/>
-            </div>
-            <div class="media-evaluation-item marquee-box-item to-top" style="transition-delay: 1s">
-              <div class="media-evaluation-txt-top">
-                <div class="media-evaluation-txt">So happy to have finally found a hair removal product that works. It isn't an overnight fix but man it does work!!</div>
-              </div>
-              <img class="media-evaluation-logo" src="./images/e10.png"/>
-            </div>
-          </div>
-        </div>
+      <div class="review-list-popup-close"></div>
+    </div>
+    <script>
+        function mediaRealSlider(name){
+            let $p=$(name)
+            let $list = $p.find('.media-evaluation-real')
+            let $dot = $p.find('.media-real-dot')
+            let $bottomArrow = $p.find('.media-real-arrow')
+            let length = $list.find('.media-evaluation-real-item').length
+            let index = -2 //[0,-length-2]
+            let isLeftBtn = 1 //0左 1右
+            let timer = null
+            let timers = null
+            let dateTb = 0
+            let dateTs = 0
+            if(length<2) return
 
-        <div class="media-evaluation-marquee-real marquee-box1">
-          <div class="media-evaluation-real marquee-box-list">
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.1s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.2s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.3s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.4s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.5s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-            <div class="media-evaluation-real-item marquee-box-item to-top" style="transition-delay: 0.6s">
-              <div class="media-evaluation-real-img">
-                <div class="media-real-img-item">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Before
-                  </div>
-                </div>
-                <div class="media-real-img-item active">
-                  <img src="./images/e11.png" alt="">
-                  <div class="real-tag">
-                    Today
-                  </div>
-                </div>
-              </div>
-              <div class="media-evaluation-real-cont">
-                <div class="media-evaluation-real-star">★★★★★</div>
-                <div class="media-evaluation-real-p">I have sensitive skin and am afraid of hair removal with wax, which is painful and makes the skin red and itchy. So I bought Ulike with the idea of giving......</div>
-                <div class="media-evaluation-real-name"> - Kelly</div>
-                <div class="media-evaluation-real-time">
-                  Usage Time:  
-                  <span>4 weeks </span>
-                </div>
-                <div class="media-evaluation-real-arrow">
-                  <div class="media-real-arrow-item"></div>
-                  <div class="media-real-arrow-item"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script>
-        $('.media-evaluation-box .media-evaluation-tab-item').hover(function(){
-          let left = 0
-          if($(this).index()){
-            left = '100%'
-          }else{
-            left = 0
-          }
-          $(this).siblings('.bg-tag').css({'transform': 'translateX('+left+')','transition': 'transform .4s'})
-        },function(){
-          let left = 0
-          if($('.media-evaluation-box .media-evaluation-tab-item.active').index()){
-            left = '100%'
-          }else{
-            left = 0
-          }
-          $(this).siblings('.bg-tag').css({'transform': 'translateX('+left+')','transition': 'transform .4s'})
-        })
-
-        $('.media-evaluation-box .media-evaluation-tab-item').click(function(){
-          $('.media-evaluation-box').css({'height':$('.media-evaluation-box')[0].clientHeight+'px'})
-          // var scrollEvent = new Event('scroll');
-          let index = $(this).index()
-          if($(this).hasClass('active')) return
-          
-          $(this).addClass('active').siblings().removeClass('active')
-          $(this).closest('.media-evaluation-box').find('.media-evaluation-marquee-list .to-top').removeClass('appear')
-          if(index){
-            let showEl = $(this).closest('.media-evaluation-box').find('.media-evaluation-marquee-real')
-            showEl.show().siblings('.media-evaluation-marquee').hide()
-            if(!showEl.attr('data-init')){
-              marqueeFn('marquee-box1',true)
-            }
-            showEl.attr('data-init',true)
-            setTimeout(()=>{
-              $(this).closest('.media-evaluation-box').find('.media-evaluation-marquee-real .to-top').addClass('appear')
-            },10)
-          }else{
-            let showEl = $(this).closest('.media-evaluation-box').find('.media-evaluation-marquee')
-            // if(!showEl.attr('data-init')){
-            //   marqueeFn('marquee-box',true)
-            // }
-            // showEl.attr('data-init',true)
-            showEl.show().siblings('.media-evaluation-marquee-real').hide()
-            setTimeout(()=>{
-              $(this).closest('.media-evaluation-box').find('.media-evaluation-marquee .to-top').addClass('appear')
-            },10)
-          }
-          // setTimeout(()=>{
-          //   window.dispatchEvent(scrollEvent);
-          // },50)
-          
-        })
-
-        $('html').on('click','.media-evaluation-box .media-real-arrow-item',function(){
-          let $p = $(this).closest('.media-evaluation-real-item')
-          let index = $p.find('.media-real-img-item.active').index()
-          $p.find('.media-real-img-item').removeClass('active').eq(index?0:1).addClass('active')
-        })
-        $('html').on('click','.media-evaluation-box .media-real-img-item',function(){
-          $(this).addClass('active').siblings('.media-real-img-item').removeClass('active')
-        })
-
-        function enableDragDetection(element, onDragLeft, onDragRight, onTouchEnd) {
-          let startX = 0;
-          let startY = 0;
-          let isDragging = false;
-          let isMobile = false;
-          element.addEventListener('touchstart', (event) => {
-            startX = event.touches[0].clientX;
-            startY = event.touches[0].clientY;
-            isDragging = true;
-            isMobile = true;
-          });
-        
-          element.addEventListener('touchmove', (event) => {
-            if (!isDragging) return;
-            const currentX = event.touches[0].clientX;
-            const currentY = event.touches[0].clientY;
-        
-            const deltaX = currentX - startX;
-            const deltaY = currentY - startY;
-            const distance = Math.abs(deltaX);
-        
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
-              if (deltaX > 0) {
-                if (onDragRight) {
-                  onDragRight(distance);
+            $list.html(
+                $list.find('.media-evaluation-real-item')[length-2].outerHTML+
+                $list.find('.media-evaluation-real-item')[length-1].outerHTML+
+                $list.html()+
+                $list.find('.media-evaluation-real-item')[0].outerHTML+
+                $list.find('.media-evaluation-real-item')[1].outerHTML)
+            skewTransform(true)
+            changeDot()
+            $p.find('.media-real-bottom-arrow-item').click(function() {
+                let sIndex = $(this).index()
+                if(+new Date() - dateTb<600) return
+                dateTb = +new Date()
+                isLeftBtn = sIndex
+                index += sIndex ? -1 : 1
+                clearInterval(timer)
+                changeLeft()
+                timer = setInterval(() => {
+                    isLeftBtn = 1
+                    index--
+                    changeLeft()                
+                }, 5000);
+            })
+            $dot.find('.media-real-dot-item').click(function(){
+              index = -$(this).index() -2
+              clearInterval(timer)
+              changeLeft()
+              timer = setInterval(() => {
+                  isLeftBtn = 1
+                  index--
+                  changeLeft()
+              }, 5000);
+            })
+            function skewTransform(auto,tIndex = index,skew=0){
+                let width = $list.find('.media-evaluation-real-item').eq(Math.abs(tIndex)-1).width()
+                let translateX = (width + 25) * tIndex
+                if(auto){
+                    translateX+=skew
+                    $list.css({
+                        'transform': 'translateX(' + translateX  + 'px)',
+                        'transition': ' all 0s ease'
+                    })
+                }else{
+                    $list.css({
+                        'transform': 'translateX(' + translateX + 'px)',
+                        'transition': ' all .6s ease'
+                    })
                 }
-              } else {
-                if (onDragLeft) {
-                  onDragLeft(distance);
+            }
+            function changeLeft(skew) {
+                if(isLeftBtn && index == (-length-2)){
+                    skewTransform(true,-1,skew)
+                    index = -2
+                }
+
+                if(!isLeftBtn && index == 0){
+                    skewTransform(true,-length-1,skew)
+                    index = -length
+                }
+                setTimeout(() => {
+                    skewTransform()
+                }, 10);
+                changeDot()
+			}
+            function changeDot(){
+                // $p.find('.media-real-dot-item').removeClass('active')
+                // setTimeout(() => {
+                $p.find('.media-real-dot-item').each(function(){
+                  let $this=$(this)
+                  let sIndex = $(this).index()
+                  if(sIndex<Math.abs(index)-2){
+                        $(this).addClass('active')
+                    }else{
+                      $(this).removeClass('active tra')
+                    }
+                  setTimeout(() => {
+                    if(sIndex==(Math.abs(index)-2)){
+                      $this.addClass('active tra')
+                    }
+                  }, 20);
+              })
+              if(index==-1){
+                  $p.find('.media-real-dot-item').addClass('active')
+                  $p.find('.media-real-dot-item').eq(length-1).addClass('active tra')
+              }
+                // }, 20);
+            }
+            function getTranslateX($element) {
+                var matrix = $element.css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+                var translateX = parseFloat(matrix[12] || matrix[4]);
+                return translateX;
+            }
+            
+            function initMobileCarousel() {
+              let startX = 0;
+              let listTar = 0;
+              let startY = 0;
+              let isScrolling = false;
+              let isDragging = false;
+
+              function clearTimer() {
+                if (timer) {
+                  clearInterval(timer);
+                  timer = null;
+                }
+              }
+
+              function setAutoPlay() {
+                clearTimer();
+                timer = setInterval(() => {
+                  isLeftBtn = 1;
+                  index--;
+                  changeLeft();
+                }, 5000);
+              }
+
+              $list.on('touchstart mousedown', function(e) {
+                clearTimer();
+
+                if (e.type === 'touchstart') {
+                  var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                  startX = touch.clientX;
+                  startY = touch.clientY;
+                } else {
+                  startX = e.clientX;
+                  startY = e.clientY;
+                }
+
+                isScrolling = false;
+                isDragging = true;
+                listTar = getTranslateX($list);
+
+                $(document).on('touchmove mousemove', handleMove);
+                $(document).on('touchend mouseup', handleEnd);
+              });
+
+              function handleMove(e) {
+                if (isDragging) {
+                  if (e.type === 'touchmove') {
+                    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                    var diffX = touch.clientX - startX;
+                    var diffY = touch.clientY - startY;
+                  } else {
+                    var diffX = e.clientX - startX;
+                    var diffY = e.clientY - startY;
+                  }
+
+                  var translateX = listTar + diffX;
+
+                  if (!isScrolling) {
+                    if (Math.abs(diffX) > Math.abs(diffY)) {
+                        isScrolling = true;
+                    }
+                  }
+
+                  if (isScrolling && e.cancelable) {
+                    e.preventDefault();
+                    $list.css({'transform': 'translateX(' + translateX + 'px)', 'transition': 'all 0s ease'});
+                  }
+                }
+              }
+
+              function handleEnd(e) {
+                if (isDragging) {
+                    $(document).off('touchmove mousemove', handleMove);
+                    $(document).off('touchend mouseup', handleEnd);
+
+                    if (isScrolling) {
+                      if (e.type === 'touchend') {
+                        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                        var diffX = touch.clientX - startX;
+                      } else {
+                        var diffX = e.clientX - startX;
+                      }
+
+                      if (Math.abs(diffX) > window.innerWidth * 0.05) {
+                        if (diffX > 0) {
+                          index = index + 1;
+                          isLeftBtn = 0;
+                        } else {
+                          index = index - 1;
+                          isLeftBtn = 1;
+                        }
+                        changeLeft(diffX);
+                      }else{
+                        $list.css({'transform': 'translateX(' + listTar + 'px)', 'transition': 'all .4s ease'});
+                      }
+                    }
+
+                    isScrolling = false;
+                    isDragging = false;
+                    setAutoPlay(); // 保证只触发一次自动播放
                 }
               }
             }
-        
-            startX = currentX;
-            startY = currentY;
-          });
-        
-          element.addEventListener('touchend', () => {
-            if (onTouchEnd && isDragging) {
-              onTouchEnd(isMobile);
-            }
-            isDragging = false;
-          });
-        
-          element.addEventListener('mousedown', (event) => {
-            startX = event.clientX;
-            startY = event.clientY;
-            isDragging = true;
-            isMobile = false;
-        
-            event.preventDefault();
-          });
-        
-          element.addEventListener('mousemove', (event) => {
-            if (!isDragging) return;
-        
-            const currentX = event.clientX;
-            const currentY = event.clientY;
-        
-            const deltaX = currentX - startX;
-            const deltaY = currentY - startY;
-            const distance = Math.abs(deltaX);
-        
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
-              if (deltaX > 0) {
-                if (onDragRight) {
-                  onDragRight(distance);
+
+            initMobileCarousel()
+            clearInterval(timer)
+            timer = setInterval(() => {
+                isLeftBtn = 1
+                index--
+                changeLeft()
+            }, 5000);
+
+            // 图片轮播
+            $p.on('click','.media-real-arrow-item',function(){
+                let $this = $(this)
+                let bIndex = $this.index()
+                let $list = $this.closest('.media-evaluation-real-img')
+                if(+new Date() - dateTs<600) return
+                dateTs = +new Date()
+                clearInterval(timers)
+                changeImg($list,bIndex)
+                timers = setInterval(() => {
+                    loopImg()
+                }, 3800);
+            })
+
+            function changeImg($list,btnIndex){
+                let dotIndex = $list.find('.media-real-img-item.active').index()
+                let length = $list.find('.media-real-img-item').length
+                if(btnIndex!=undefined){
+                    dotIndex += btnIndex?1:-1
+                }else{
+                    dotIndex++
                 }
-              } else {
-                if (onDragLeft) {
-                  onDragLeft(distance);
-                }
-              }
+                if(dotIndex==length) dotIndex=0
+                if(dotIndex<0) dotIndex = length-1
+                $list.find('.media-real-img-item.active').removeClass('active').addClass('close')
+                $list.find('.media-real-img-item').eq(dotIndex).addClass('active')
+                setTimeout(()=>{
+                    $list.find('.media-real-img-item.close').removeClass('close')
+                },600)
             }
-        
-            startX = currentX;
-            startY = currentY;
-          });
-        
-          element.addEventListener('mouseup', () => {
-            if (onTouchEnd && isDragging) {
-              onTouchEnd(isMobile);
+            function loopImg(){
+                $p.find('.media-evaluation-real-img').each(function(){
+                    changeImg($(this))
+                })
             }
-            isDragging = false;
-          });
-        
-          element.addEventListener('contextmenu', (event) => {
-            event.preventDefault();
-          });
+            
+            // timers = setInterval(() => {
+            //     loopImg()             
+            // }, 3800);
+
+          $list.hover(function(){
+            clearInterval(timer)
+          },function(){
+            clearInterval(timer)
+            timer = setInterval(() => {
+                isLeftBtn = 1
+                index--
+                changeLeft()
+            }, 5000);
+          }) 
         }
         
-        function marqueeFn(elName,bol){
-          var content = document.querySelector("."+elName)
-          var ul = content.querySelector(".marquee-box-list")
-          var speed = 1;
+        window.addEventListener('load',function(){
+          mediaRealSlider('.media-evaluation-real-box')
+
+          $('.media-evaluation-real-box .media-evaluation-real-btn').click(function(){
+            let textL = $(this).closest('.media-evaluation-real-box').attr('data-text').split(',').filter(item=>item)
+            let imgL = $(this).attr('data-src').split(',').filter(item=>item)
+            if(textL.length >= imgL.length){
+              let html = imgL.map((item,index)=>{
+                return `<div class="review-list-popup-item">
+                    <img src="${item}" alt="" class="img">
+                    <div class="review-list-tag">${textL[index]}</div>
+                  </div>`
+              })
+
+              $('.review-list-popup .review-list-popup-img').html(html)
+              $('.review-list-popup').css({'display':'flex'})
+            }
+            
+          })
+          $('.review-list-popup .review-list-popup-close').click(function(){
+            $('.review-list-popup').css({'display':'none'})
+          })
+        })
+    </script>
+
+
+    <div class="medium-box-diy marquee">
+        <div class="media-home-slider-list">
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.1s">
+                <img src="./images3/d1.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.2s">
+                <img src="./images3/d2.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.3s">
+                <img src="./images3/d3.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.4s">
+                <img src="./images3/d4.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.5s">
+                <img src="./images3/d5.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.6s">
+                <img src="./images3/d6.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.7s">
+                <img src="./images3/d7.png" alt="" srcset="">
+            </div>
+            <div class="media-home-slider__img to-top" style="transition-delay: 0.8s">
+                <img src="./images3/d8.png" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+    <script>
+        function marqueeFn(bol){
+          var content = document.querySelector(".marquee")
+          var ul = content.querySelector(".media-home-slider-list")
+          var speed = 1.5;
           var width = content.clientWidth
           var swidth = ul.clientWidth
           var liWidthAll = 0
           let timer = null
-          let isDouble = false
+          let isDouble = true
           let left =0
           if(width>swidth) isDouble = true
           if(bol){
             ul.innerHTML += isDouble?ul.innerHTML+ul.innerHTML:ul.innerHTML
           }
-          ul.querySelectorAll(".marquee-box-item").forEach(item=>{
-            liWidthAll+=item.offsetWidth+15
+
+          ul.querySelectorAll(".media-home-slider__img").forEach(item=>{
+            item.querySelector('img').onload=function(){
+                liWidthAll+=item.offsetWidth
+            }
           })
+
           ul.style.width = liWidthAll + "px"
           function run() {
-              if (left < -ul.offsetWidth / (isDouble?3:2)) {
+              if (left < -liWidthAll / (isDouble?3:2)) {
                   left = 0
               }
               if(left>0){
-                left = -ul.offsetWidth / (isDouble?3:2)
+                left = -liWidthAll / (isDouble?3:2)
               }
               left-=speed
-
               ul.style.transform =  'translateX('+left+'px)' 
-
             }
-          
-          timer = setInterval(run, 10)
+          run()
+          timer = setInterval(run, 20)
           content.onmouseover = function() {
               clearInterval(timer)
           }
           content.onmouseout = function() {
-            clearInterval(timer)
-              timer = setInterval(run, 10)
+              timer = setInterval(run, 20)
           }
-
-          enableDragDetection(ul,
-            (distance) => {
-              clearInterval(timer)
-              // <!-- console.log(`向左拖拽，距离：${distance}px`); -->
-              left -=distance
-              run()
-            },
-            (distance) => {
-              clearInterval(timer)
-              // <!-- console.log(`向右拖拽，距离：${distance}px`); -->
-              left +=distance
-              run()
-            },
-            (isMobile) => {
-              console.log(isMobile)
-              // <!-- console.log('触摸结束'); -->
-              // <!-- if(isMobile){ -->
-                // <!-- clearInterval(timer) -->
-                // <!-- timer = setInterval(run, 10) -->
-              // <!-- } -->
-            }
-          );
 
           const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-              const isHidden = entry.target.style.display === 'none';
               if (entry.isIntersecting) {
                 // <!-- console.log('元素进入视口'); -->
                 clearInterval(timer)
-                timer = setInterval(run, 10)
+                timer = setInterval(run, 20)
               } else {
                 // <!-- console.log('元素离开视口'); -->
                 clearInterval(timer)
               }
-              if (isHidden) {
-                // <!-- console.log('元素被隐藏'); -->
-                clearInterval(timer)
-              } else {
-                // <!-- console.log('元素不再隐藏'); -->
-                clearInterval(timer)
-                timer = setInterval(run, 10)
-              }
             });
           }, { attributes: true });
           observer.observe(content);
-      }
-      marqueeFn('marquee-box',true)
-      // window.addEventListener('scroll',function(){
-      //   setTimeout(()=>{
-      //     const bounding = document.querySelector('.media-evaluation-box').getBoundingClientRect();
-      //     let isInit = document.querySelector('.media-evaluation-box .media-evaluation-marquee').getAttribute('data-init')
-      //     if(bounding.top<window.innerHeight-100){
-      //       console.log(bounding)
-      //       if(!isInit){
-      //         marqueeFn('marquee-box',true)
-      //         document.querySelector('.media-evaluation-box .media-evaluation-marquee').setAttribute('data-init',true)
-      //       }
-      //     }
-      //   },100)
-        
-      // })
-      
-      </script>
-    </div>
-
-    <div class="brand-story-box">
-      <img src="./images/f1.png" alt="" class="brand-story-bg pc-box to-opacity">
-      <img src="./images/f3.png" alt="" class="brand-story-bg mb-box to-opacity">
-      <div class="brand-story-top">
+        }
+        // window.addEventListener('load',function(){
+            marqueeFn(true)
+        // })
+    </script>
+    
+    <div class="sub-activity-box">
         <div class="container">
-          <div class="brand-story-cont">
-            <div class="brand-story-play to-top">
-              <div class="play-btn">
-              </div>
-            </div>
-            <div class="brand-story-txt to-top" style="transition-delay: 0.3s">
-              <div class="brand-story-title text-top" style="transition-delay: 0.6s">Become a family beauty salon serving global consumers</div>
-              <div class="brand-story-p to-top" style="transition-delay: 0.8s">For the past decade, Ulike has been focusing on the field of home hair removal, assisting over 4 million users in resolving their hair removal concerns. We devoted 6 years to create the industry-leading Sapphire painless technology, making at-home permanent hair removal painless, safe, and effective...</div>
-              <a href="#" class="brand-story-btn btn-diy to-top" style="transition-delay: 1s">
-                <div class="btn-txt" text="About Ulike >">
-                  <span>About Ulike ></span>
+            <div class="sub-activity-list">
+                <div class="sub-activity-left">
+                    <div class="sub-activity-item to-top" style="transition-delay: 0.1s">
+                        <!-- <img class="img" src="./images3/e1.png" alt="" /> -->
+                        <picture>
+                            <source srcset="./images3/e1-1.png"
+                                media="(max-width: 991px)">
+                            <source srcset="./images3/e1.png"
+                                media="(min-width: 992px)">
+                            <img class="img" src="./images3/e1.png" alt=""  />
+                        </picture>
+                        <div class="sub-activity-cont">
+                            <div>
+                                <div class="sub-activity-title text-top" style="transition-delay: 0.3s">Ulike 10th</div>
+                                <div class="sub-activity-p text-top" style="transition-delay: 0.4s">
+                                  Celebrating a decade of empowering women <br/> and transforming lives from the comfort of home.
+                                </div>
+                                <a href="#" class="sub-activity-btn btn-diy text-top-btn" style="transition-delay: 1s">
+                                <div class="btn-txt" text="Learn more >">
+                                    <span>Learn more ></span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </a>
+                <div class="sub-activity-right">
+                    <div class="sub-activity-item to-top" style="transition-delay: 0.1s">
+                        <!-- <img class="img" src="./images3/e2.png" alt="" /> -->
+                        <picture>
+                            <source srcset="./images3/e2-1.png"
+                                media="(max-width: 991px)">
+                            <source srcset="./images3/e2.png"
+                                media="(min-width: 992px)">
+                            <img class="img" src="./images3/e2.png" alt=""  />
+                        </picture>
+                        <div class="sub-activity-cont">
+                            <div>
+                                <div class="sub-activity-title text-top" style="transition-delay: 0.3s">
+                                    <span>UlikeForPCOS</span>
+                                </div>
+                                <div class="sub-activity-p text-top" style="transition-delay: 0.4s">
+                                  Proud partners of the PCOS community.
+                                </div>
+                                <a href="#" class="sub-activity-btn btn-diy text-top-btn" style="transition-delay: 1s">
+                                <div class="btn-txt" text="Learn more >">
+                                    <span>Learn more ></span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-activity-item to-top" style="transition-delay: 0.2s">
+                        <!-- <img class="img" src="./images3/e3.png" alt="" /> -->
+                        <picture>
+                            <source srcset="./images3/e3-1.png"
+                                media="(max-width: 991px)">
+                            <source srcset="./images3/e3.png"
+                                media="(min-width: 992px)">
+                            <img class="img" src="./images3/e3.png" alt=""  />
+                        </picture>
+                        <div class="sub-activity-cont">
+                            <div>
+                                <div class="sub-activity-title text-top" style="transition-delay: 0.5s">
+                                  Compare IPL Devices
+                                </div>
+                                <div class="sub-activity-p text-top" style="transition-delay: 0.7s">
+                                  Find the perfect device for you.
+                                </div>
+                                <a href="#" class="sub-activity-btn btn-diy text-top-btn" style="transition-delay: 1.2s">
+                                <div class="btn-txt" text="Learn more >">
+                                    <span>Learn more ></span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="sub-activity-dot">
+                <div class="sub-activity-dot-item active"></div>
+                <div class="sub-activity-dot-item"></div>
+            </div>
         </div>
-      </div>
     </div>
+    <script>
+        function subActivitySlider(){
+            let $p=$('.sub-activity-box')
+            let $list = $p.find('.sub-activity-right')
+            let length = $list.find('.sub-activity-item').length
+            let index = 0
+            let timer = null
+
+            $p.find('.sub-activity-dot-item').click(function(){
+                let btnIndex = $(this).index()
+                index = btnIndex
+                changeTranslateX()
+            })
+
+            function changeTranslateX(){
+                let width = $list.find('.sub-activity-item').width()+30
+                if(index==length) index = 0
+                $list.css({'transform':'translateX(-'+ width*index +'px)','transition': ' all .4s ease'})
+                $p.find('.sub-activity-dot-item').removeClass('active').eq(index).addClass('active')
+            }
+            timer = setInterval(()=>{
+                index++
+                changeTranslateX()
+            },4800)
+            window.addEventListener('resize',function(){
+                if(window.innerWidth>992){
+                    clearInterval(timer)
+                    $list.css({'transform':'translateX(0px)'})
+                }
+            })
+            function initMobileCarousel() {
+                let startX = 0;
+                let startY = 0;
+                let isScrolling = false;
+
+                $list.on('touchstart', function(e) {
+                    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                    startX = touch.clientX;
+                    startY = touch.clientY;
+                    isScrolling = false;
+                    clearInterval(timer)
+                });
+
+                $list.on('touchmove', function(e) {
+                    var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                    var diffX = touch.clientX - startX;
+                    var diffY = touch.clientY - startY;
+                    if(!isScrolling){
+                        if (Math.abs(diffX) > Math.abs(diffY)) {
+                            isScrolling = true;
+                        }
+                    }
+                    
+                    if(isScrolling&&e.cancelable){
+                        e.preventDefault();
+                    }
+                });
+
+                $list.on('touchend', function(e) {
+                    isScrolling = false
+                    if (!isScrolling) {
+                        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+                        var diffX = touch.clientX - startX;
+                        if (Math.abs(diffX) > window.innerWidth * 0.05) {
+                            index++
+                            changeTranslateX()
+                        }
+                        timer = setInterval(()=>{
+                            index++
+                            changeTranslateX()
+                        },4800)
+                    }
+                });
+            }
+            initMobileCarousel()
+        }
+        if(window.innerWidth<991){
+            subActivitySlider()
+        }
+    </script>
+
 
     <div class="blog-info-box">
       <div class="container">
         <div class="title-diy text-top">Real Results From Verified Ulike</div>
         <div class="blog-info-cont">
-          <a href="#" class="blog-info-left to-top" style="transition-delay: 0.1s">
+          <a href="#" target="_blank" class="blog-info-left to-top" style="transition-delay: 0.1s">
             <img class="img" src="./images/g1.png" alt="">
             <div class="blog-info-left-txt">
               <div class="blog-info-left-time text-top">Aug 15, 2023</div>
               <div class="blog-info-left-title text-top">How Often Should I Use IPL Hair Removal Device at Home?</div>
-              <!-- <div class="blog-info-left-p">How Often Should I Use IPL Hair Removal Device at Home?</div> -->
               <div class="blog-info-left-btn btn-diy">
                 <div class="btn-txt" text="Learn more >">
                   <span>Learn more ></span>
@@ -2512,6 +2407,8 @@
         --text-color: 139, 139, 139;
         --section-background: 245, 245, 245;
         --vertical-breather: 40px; /* Inner spacing is smaller on this section */
+        position: relative;
+        z-index: 3;
       }
       #shopify-section-sections--16782741766385__text-with-icons p{
         margin: 0;
@@ -2556,11 +2453,14 @@
       class="shopify-section shopify-section--footer"
     >
       <style>
-        #shopify-section-footer .footer {
+         #shopify-section-footer .footer {
           --background: 4, 0, 0;
           --heading-color: 255, 255, 255;
           --text-color: 255, 255, 255;
           --border-color: 42, 38, 38;
+          overflow: hidden;
+          position: relative;
+          z-index: 3;
         }
         @media (max-width:991px) {
           .footer .footer__item-list{
@@ -2586,7 +2486,6 @@
         }
 
         .footer__top .social-media__item {
-          /* box-shadow: none; */
           color: #fff;
         }
 
@@ -2599,18 +2498,15 @@
         .footer__top button.btn-ico {
           position: absolute;
           right: 5px;
-          top:0;
-          height: 100%;
-        }
-
-        .footer__top button.btn-ico .loader-button__text{
+          top:5px;
           height: calc(100% - 10px);
           color: #fff;
-          background: #000;
           padding: 0 20px;
+          background: #e7004c;
           transition: all .4s ease;
         }
-        .footer__top button.btn-ico:hover .loader-button__text{
+
+        .footer__top button.btn-ico:hover{
           opacity: .6;
         }
 
@@ -2698,8 +2594,42 @@
           margin-top: 10px;
         }
         @media (max-width:991px) {
-          .footer .footer__item--social-media{
+        .footer .footer__item--social-media{
           order: -1;
+          position: relative;
+        }
+        .footer .footer__item{
+          max-width: none;
+        }
+        .footer .footer__top{
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .footer .footer__item--social-media::before{
+          position: absolute;
+          content: '';
+          display: block;
+          width: 100vw;
+          height:90%;
+          background: #e7004c;
+          top: -47px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 0;
+        }
+        .footer__top .footer__top-subscribe{
+          max-width: 100%;
+        }
+        .footer .footer__item--social-media ul{
+          margin-top: 50px;
+        }
+        .footer .footer__item--social-media .footer__item-content p{
+          color: #fff;
+          position: relative;
+          z-index: 1;
+        }
+        .footer__top button.btn-ico{
+          background: #e7004c;
         }
         .footer__inner{
           padding-top: 15px;
